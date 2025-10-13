@@ -1,0 +1,11 @@
+font=CaskadyaMono Nerd Font Mono 10
+background-color=#1a1b26E6  
+text-color=#c0caf5          
+border-color=#7aa2f7        
+border-size=3
+border-radius=8
+padding=12
+margin=15
+default-timeout=5000
+layer=overlay
+format=<b>%s</b>\n%b  

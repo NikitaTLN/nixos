@@ -13,6 +13,7 @@ let
     wlogout = "wlogout";
     mako = "mako";
     walls = "walls";
+    scripts = "scripts";
   };
 in
 {
@@ -21,7 +22,19 @@ in
   home.homeDirectory = "/home/w1dget";
   home.stateVersion = "25.05";
   home.file.".zshrc".source = ./zshrc;
-
+  home.file.".tmux.conf".source = "${config.home.homeDirectory}/nixos/tmux.conf";
+  home.file.".tmux" = {
+    source = "${config.home.homeDirectory}/nixos/tmux/";
+    recursive = true;
+  };
+  home.file.".icons" = {
+    source = "${config.home.homeDirectory}/nixos/icons/";
+    recursive = true;
+  };
+  home.file.".themes" = {
+    source = "${config.home.homeDirectory}/nixos/themes/";
+    recursive = true;
+  };
   home.packages = with pkgs; [
     tree
     fastfetch

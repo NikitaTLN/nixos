@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+project_dirs=$(echo "$PROJECTS" | tr ':' ' ')
+
+if [ -z "$project_dirs" ]; then
+    echo "No project directories defined in PROJECTS variable."
+    exit 1
+fi
+
+todo=$(grep --exclude-dir={Library,.git} -I -r TODO $project_dirs 2>/dev/null | fzf --preview 'bat --style=numbers --color=always --line-range :500 "$(echo {} | cut -d: -f1)"')
+
+if [ -n "$todo" ]; then
+    nvim "$(echo "$todo" | cut -d: -f1)"
+else
+    echo "No TODO lines found."
+fi

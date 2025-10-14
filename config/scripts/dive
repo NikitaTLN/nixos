@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+dir=$(find ~/ -path '*/.git' -maxdepth 2 -prune -o -type d -print | fzf)
+
+if [ -n "$dir" ]; then
+    cd "$dir"
+    nvim .
+fi

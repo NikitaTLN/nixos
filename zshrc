@@ -36,12 +36,12 @@ eval "$(oh-my-posh init zsh --config $HOME/.config/omp/config.toml)"
 # Keybindings
 bindkey -e
 bindkey '^k' history-search-backward
-bindkey -s '^g' 'python3 ~/.local/scripts/forge.py\n'
-bindkey -s '^v' 'python3 ~/.local/scripts/gcom.py\n'
-bindkey -s '^f' '~/.local/scripts/dive\n'
-bindkey -s '^w' '~/.local/scripts/markdown\n'
-bindkey -s '^b' '~/.local/scripts/menu-tui\n'
-bindkey -s '^e' '~/.local/scripts/fuzzcat\n'
+bindkey -s '^g' 'python3 ~/.config/scripts/forge.py \n'
+bindkey -s '^v' 'python3 ~/.config/scripts/gcom.py \n'
+bindkey -s '^f' '~/.config/scripts/dive \n'
+bindkey -s '^w' '~/.config/scripts/markdown \n'
+bindkey -s '^b' '~/.config/scripts/menu-tui \n'
+bindkey -s '^e' '~/.config/scripts/fuzzcat \n'
 bindkey '^j' history-search-forward
 bindkey '^[w' kill-region
 
@@ -75,8 +75,8 @@ zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 alias vim='nvim'
 alias ls='eza -a -1 --color=always --icons=always'
 alias et='eza -a -1 --color=always --icons=always -T'
+alias build="sudo nixos-rebuild --flake ~/nixos#nixos-btw --impure switch"
 
 # Shell integrations
 eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
-export PATH="$HOME/.local/scripts:$PATH"

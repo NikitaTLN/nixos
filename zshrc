@@ -32,17 +32,66 @@ zinit cdreplay -q
 
 eval "$(oh-my-posh init zsh --config $HOME/.config/omp/config.toml)"
 
+# Enable Emacs keybindings
 bindkey -e
 
-# Define individual widget functions for each command
-run-forge() { zle -I; python3 $HOME/.config/scripts/forge.py; zle reset-prompt }
-run-gcom() { zle -I; python3 $HOME/.config/scripts/gcom.py; zle reset-prompt }
-run-dive() { zle -I; $HOME/.config/scripts/dive; zle reset-prompt }
-run-markdown() { zle -I; $HOME/.config/scripts/markdown; zle reset-prompt }
-run-menu-tui() { zle -I; $HOME/.config/scripts/menu-tui; zle reset-prompt }
-run-fuzzcat() { zle -I; $HOME/.config/scripts/fuzzcat; zle reset-prompt }
+# Define widget functions with error handling
+run-forge() {
+  zle -I
+  python3 $HOME/.config/scripts/forge.py 2>&1
+  local ret=$?
+  if [[ $ret -ne 0 ]]; then
+    echo "Error running forge.py: exit code $ret"
+  fi
+  zle reset-prompt
+}
+run-gcom() {
+  zle -I
+  python3 $HOME/.config/scripts/gcom.py 2>&1
+  local ret=$?
+  if [[ $ret -ne 0 ]]; then
+    echo "Error running gcom.py: exit code $ret"
+  fi
+  zle reset-prompt
+}
+run-dive() {
+  zle -I
+  $HOME/.config/scripts/dive 2>&1
+  local ret=$?
+  if [[ $ret -ne 0 ]]; then
+    echo "Error running dive: exit code $ret"
+  fi
+  zle reset-prompt
+}
+run-markdown() {
+  zle -I
+  $HOME/.config/scripts/markdown 2>&1
+  local ret=$?
+  if [[ $ret -ne 0 ]]; then
+    echo "Error running markdown: exit code $ret"
+  fi
+  zle reset-prompt
+}
+run-menu-tui() {
+  zle -I
+  $HOME/.config/scripts/menu-tui 2>&1
+  local ret=$?
+  if [[ $ret -ne 0 ]]; then
+    echo "Error running menu-tui: exit code $ret"
+  fi
+  zle reset-prompt
+}
+run-fuzzcat() {
+  zle -I
+  $HOME/.config/scripts/fuzzcat 2>&1
+  local ret=$?
+  if [[ $ret -ne 0 ]]; then
+    echo "Error running fuzzcat: exit code $ret"
+  fi
+  zle reset-prompt
+}
 
-# Register each widget
+# Register widgets
 zle -N run-forge
 zle -N run-gcom
 zle -N run-dive
@@ -60,7 +109,6 @@ bindkey '^b' run-menu-tui
 bindkey '^e' run-fuzzcat
 bindkey '^j' history-search-forward
 bindkey '^[w' kill-region
-
 #if command -v tmux >/dev/null 2>&1; then
 #  if [ -z "$TMUX" ]; then
 #    tmux attach -t workflow || tmux new -s workflow

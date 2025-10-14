@@ -13,7 +13,7 @@
         };
     };
 
-    outputs = { self, nixpkgs, home-manager, zen-browser, ... }: {
+    outputs = { self, nixpkgs, home-manager, zen-browser, ... } @ inputs: {
         nixosConfigurations.nixos-btw = nixpkgs.lib.nixosSystem {
             system = "x86_64-linux";
             modules = [

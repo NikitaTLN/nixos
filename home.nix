@@ -2,6 +2,7 @@
 let
   dotfiles = "${config.home.homeDirectory}/nixos/config";
   create_symlink = path: config.lib.file.mkOutOfStoreSymlink path;
+  system = "x86_64-linux";
   configs = {
     hypr = "hypr";
     omp = "omp";

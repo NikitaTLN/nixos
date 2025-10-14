@@ -32,7 +32,7 @@ zinit cdreplay -q
 
 eval "$(oh-my-posh init zsh --config $HOME/.config/omp/config.toml)"
 
-bindkey -v
+bindkey -e
 
 # Define individual widget functions for each command
 run-forge() { zle -I; python3 $HOME/.config/scripts/forge.py; zle reset-prompt }

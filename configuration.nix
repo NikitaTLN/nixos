@@ -8,6 +8,8 @@
 
   nixpkgs.config.allowUnfree = true;
 
+  services.tailscale.enable = true;
+
   boot.loader = {
     efi = {
       canTouchEfiVariables = true;

@@ -125,17 +125,6 @@
     sbctl
     cliphist
     wl-clipboard-rs
-    inputs.zen-browser.packages."${system}".specific
-#    inputs.zen-browser.packages."${system}".default # beta
-#    inputs.zen-browser.packages."${system}".beta
-#    inputs.zen-browser.packages."${system}".twilight
-#    inputs.zen-browser.packages."${system}".twilight-official
-#    inputs.zen-browser.packages."${system}".default.override {
-#      policies = {
-#          DisableAppUpdate = true;
-#          DisableTelemetry = true;
-#      };
-#    }
   ];
 
   programs.appimage = {

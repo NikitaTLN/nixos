@@ -18,6 +18,11 @@ let
   };
 in
 {
+  imports = [
+    inputs.zen-browser.homeModules.beta
+  ];
+
+  programs.zen-browser.enable = true;
 
   home.username = "w1dget";
   home.homeDirectory = "/home/w1dget";

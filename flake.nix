@@ -16,6 +16,7 @@
     outputs = { self, nixpkgs, home-manager, zen-browser, ... } @ inputs: {
         nixosConfigurations.nixos-btw = nixpkgs.lib.nixosSystem {
             system = "x86_64-linux";
+            specialArgs = { inherit inputs; };
             modules = [
                 ./configuration.nix
                 home-manager.nixosModules.home-manager
@@ -25,6 +26,7 @@
                         useUserPackages = true;
                         users.w1dget = import ./home.nix;
                         backupFileExtension = "backup";
+                        extraSpecialArgs = { inherit inputs; };
                     };
                 }
             ];

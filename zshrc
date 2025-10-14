@@ -37,12 +37,12 @@ bindkey -e
 bindkey '^k' history-search-backward
 bindkey '^j' history-search-forward
 bindkey '^[w' kill-region
-bindkey '^g' "python3 $HOME/.config/scripts/forge.py"
-bindkey '^v' "python3 $HOME/.config/scripts/gcom.py"
-bindkey '^f' "$HOME/.config/scripts/dive"
-bindkey '^w' "$HOME/.config/scripts/markdown"
-bindkey '^b' "$HOME/.config/scripts/menu-tui"
-bindkey '^e' "$HOME/.config/scripts/fuzzcat"
+bindkey '^g' "python3 $HOME/nixos/config/scripts/forge.py"
+bindkey '^v' "python3 $HOME/nixos/config/scripts/gcom.py"
+bindkey '^f' "$HOME/nixos/config/scripts/dive"
+bindkey '^w' "$HOME/nixos/config/scripts/markdown"
+bindkey '^b' "$HOME/nixos/config/scripts/menu-tui"
+bindkey '^e' "$HOME/nixos/config/scripts/fuzzcat"
 
 
 

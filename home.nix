@@ -23,9 +23,9 @@ in
   home.stateVersion = "25.05";
   home.file.".zshrc".source = ./zshrc;
   home.file.".tmux.conf".source = ./tmuxconf;
-  home.file.".tmux".source = "${config.home.homeDirectory}/tmux";
-  home.file.".themes".source = "${config.home.homeDirectory}/themes";
-  home.file.".icons".source = "${config.home.homeDirectory}/icons";
+  home.file.".tmux".source = "${config.home.homeDirectory}/nixos/tmux";
+  home.file.".themes".source = "${config.home.homeDirectory}/nixos/themes";
+  home.file.".icons".source = "${config.home.homeDirectory}/nixos/icons";
   home.packages = with pkgs; [
     tree
     fastfetch

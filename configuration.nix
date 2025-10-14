@@ -123,6 +123,8 @@
     jq
     ungoogled-chromium
     sbctl
+    cliphist
+    wl-clipboard-rs
 #    inputs.zen-browser.packages."${system}".default # beta
 #    inputs.zen-browser.packages."${system}".beta
 #    inputs.zen-browser.packages."${system}".twilight

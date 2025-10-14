@@ -47,6 +47,9 @@ in
     pavucontrol
     viber
     cava
+    mono
+    msbuild
+    dotnet
     (pkgs.writeShellApplication {
       name = "ns";
       runtimeInputs = with pkgs; [

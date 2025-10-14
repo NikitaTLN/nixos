@@ -35,80 +35,29 @@ eval "$(oh-my-posh init zsh --config $HOME/.config/omp/config.toml)"
 # Enable Emacs keybindings
 bindkey -e
 
-# Define widget functions with error handling
-run-forge() {
-  zle -I
-  python3 $HOME/.config/scripts/forge.py 2>&1
-  local ret=$?
-  if [[ $ret -ne 0 ]]; then
-    echo "Error running forge.py: exit code $ret"
-  fi
-  zle reset-prompt
-}
-run-gcom() {
-  zle -I
-  python3 $HOME/.config/scripts/gcom.py 2>&1
-  local ret=$?
-  if [[ $ret -ne 0 ]]; then
-    echo "Error running gcom.py: exit code $ret"
-  fi
-  zle reset-prompt
-}
-run-dive() {
-  zle -I
-  $HOME/.config/scripts/dive 2>&1
-  local ret=$?
-  if [[ $ret -ne 0 ]]; then
-    echo "Error running dive: exit code $ret"
-  fi
-  zle reset-prompt
-}
-run-markdown() {
-  zle -I
-  $HOME/.config/scripts/markdown 2>&1
-  local ret=$?
-  if [[ $ret -ne 0 ]]; then
-    echo "Error running markdown: exit code $ret"
-  fi
-  zle reset-prompt
-}
-run-menu-tui() {
-  zle -I
-  $HOME/.config/scripts/menu-tui 2>&1
-  local ret=$?
-  if [[ $ret -ne 0 ]]; then
-    echo "Error running menu-tui: exit code $ret"
-  fi
-  zle reset-prompt
-}
-run-fuzzcat() {
-  zle -I
-  $HOME/.config/scripts/fuzzcat 2>&1
-  local ret=$?
-  if [[ $ret -ne 0 ]]; then
-    echo "Error running fuzzcat: exit code $ret"
-  fi
-  zle reset-prompt
+# Function to run a command in the current terminal and reset the prompt
+run-script() {
+  # Clear the current command line buffer
+  print -rn $'\e[2K\r'
+  # Run the command
+  eval "$@"
+  # Reset the prompt
+  print -n $'\n'; prompt
 }
 
-# Register widgets
-zle -N run-forge
-zle -N run-gcom
-zle -N run-dive
-zle -N run-markdown
-zle -N run-menu-tui
-zle -N run-fuzzcat
-
-# Bind keys to widgets
+# Bind keys to run scripts in the current terminal
 bindkey '^k' history-search-backward
-bindkey '^g' run-forge
-bindkey '^v' run-gcom
-bindkey '^f' run-dive
-bindkey '^w' run-markdown
-bindkey '^b' run-menu-tui
-bindkey '^e' run-fuzzcat
 bindkey '^j' history-search-forward
 bindkey '^[w' kill-region
+bindkey '^g' "run-script python3 $HOME/.config/scripts/forge.py"
+bindkey '^v' "run-script python3 $HOME/.config/scripts/gcom.py"
+bindkey '^f' "run-script $HOME/.config/scripts/dive"
+bindkey '^w' "run-script $HOME/.config/scripts/markdown"
+bindkey '^b' "run-script $HOME/.config/scripts/menu-tui"
+bindkey '^e' "run-script $HOME/.config/scripts/fuzzcat"
+
+
+
 #if command -v tmux >/dev/null 2>&1; then
 #  if [ -z "$TMUX" ]; then
 #    tmux attach -t workflow || tmux new -s workflow

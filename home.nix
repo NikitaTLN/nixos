@@ -47,6 +47,7 @@ in
     pavucontrol
     viber
     cava
+    inputs.zen-browser.packages."${system}".specific
     (pkgs.writeShellApplication {
       name = "ns";
       runtimeInputs = with pkgs; [

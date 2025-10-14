@@ -34,24 +34,32 @@ eval "$(oh-my-posh init zsh --config $HOME/.config/omp/config.toml)"
 
 bindkey -v
 
-run-shell-command() {
-  zle -I 
-  eval "$@"
-  zle reset-prompt
-}
+# Define individual widget functions for each command
+run-forge() { zle -I; python3 $HOME/.config/scripts/forge.py; zle reset-prompt }
+run-gcom() { zle -I; python3 $HOME/.config/scripts/gcom.py; zle reset-prompt }
+run-dive() { zle -I; $HOME/.config/scripts/dive; zle reset-prompt }
+run-markdown() { zle -I; $HOME/.config/scripts/markdown; zle reset-prompt }
+run-menu-tui() { zle -I; $HOME/.config/scripts/menu-tui; zle reset-prompt }
+run-fuzzcat() { zle -I; $HOME/.config/scripts/fuzzcat; zle reset-prompt }
 
-zle -N run-shell-command
+# Register each widget
+zle -N run-forge
+zle -N run-gcom
+zle -N run-dive
+zle -N run-markdown
+zle -N run-menu-tui
+zle -N run-fuzzcat
 
+# Bind keys to widgets
 bindkey '^k' history-search-backward
-bindkey '^g' 'run-shell-command python3 $HOME/.config/scripts/forge.py'
-bindkey '^v' 'run-shell-command python3 $HOME/.config/scripts/gcom.py'
-bindkey '^f' 'run-shell-command $HOME/.config/scripts/dive'
-bindkey '^w' 'run-shell-command $HOME/.config/scripts/markdown'
-bindkey '^b' 'run-shell-command $HOME/.config/scripts/menu-tui'
-bindkey '^e' 'run-shell-command $HOME/.config/scripts/fuzzcat'
+bindkey '^g' run-forge
+bindkey '^v' run-gcom
+bindkey '^f' run-dive
+bindkey '^w' run-markdown
+bindkey '^b' run-menu-tui
+bindkey '^e' run-fuzzcat
 bindkey '^j' history-search-forward
 bindkey '^[w' kill-region
-
 
 #if command -v tmux >/dev/null 2>&1; then
 #  if [ -z "$TMUX" ]; then

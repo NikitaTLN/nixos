@@ -22,6 +22,7 @@ in
   home.homeDirectory = "/home/w1dget";
   home.stateVersion = "25.05";
   home.file.".zshrc".source = ./zshrc;
+  home.file.".tmux.conf".source = ./tmuxconf;
   home.packages = with pkgs; [
     tree
     fastfetch

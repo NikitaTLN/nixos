@@ -32,29 +32,17 @@ zinit cdreplay -q
 
 eval "$(oh-my-posh init zsh --config $HOME/.config/omp/config.toml)"
 
-# Enable Emacs keybindings
 bindkey -e
 
-# Function to run a command in the current terminal and reset the prompt
-run-script() {
-  # Clear the current command line buffer
-  print -rn $'\e[2K\r'
-  # Run the command
-  eval "$@"
-  # Reset the prompt
-  print -n $'\n'; prompt
-}
-
-# Bind keys to run scripts in the current terminal
 bindkey '^k' history-search-backward
 bindkey '^j' history-search-forward
 bindkey '^[w' kill-region
-bindkey '^g' "run-script python3 $HOME/.config/scripts/forge.py"
-bindkey '^v' "run-script python3 $HOME/.config/scripts/gcom.py"
-bindkey '^f' "run-script $HOME/.config/scripts/dive"
-bindkey '^w' "run-script $HOME/.config/scripts/markdown"
-bindkey '^b' "run-script $HOME/.config/scripts/menu-tui"
-bindkey '^e' "run-script $HOME/.config/scripts/fuzzcat"
+bindkey '^g' "python3 $HOME/.config/scripts/forge.py"
+bindkey '^v' "python3 $HOME/.config/scripts/gcom.py"
+bindkey '^f' "$HOME/.config/scripts/dive"
+bindkey '^w' "$HOME/.config/scripts/markdown"
+bindkey '^b' "$HOME/.config/scripts/menu-tui"
+bindkey '^e' "$HOME/.config/scripts/fuzzcat"
 
 
 

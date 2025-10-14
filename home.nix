@@ -21,6 +21,7 @@ in
   home.username = "w1dget";
   home.homeDirectory = "/home/w1dget";
   home.stateVersion = "25.05";
+  programs.home-manager.enable = true;
   home.file.".zshrc".source = ./zshrc;
   home.file.".tmux.conf".source = ./tmuxconf;
   home.file.".tmux".source = "${config.home.homeDirectory}/nixos/tmux";

@@ -125,6 +125,7 @@
     sbctl
     cliphist
     wl-clipboard-rs
+    rpi-imager
   ];
 
   programs.appimage = {

@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, system, inputs, ... }:
 let
   dotfiles = "${config.home.homeDirectory}/nixos/config";
   create_symlink = path: config.lib.file.mkOutOfStoreSymlink path;

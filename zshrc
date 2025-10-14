@@ -36,12 +36,12 @@ eval "$(oh-my-posh init zsh --config $HOME/.config/omp/config.toml)"
 # Keybindings
 bindkey -e
 bindkey '^k' history-search-backward
-bindkey '^g' 'python3 ~/.config/scripts/forge.py\n'
-bindkey '^v' 'python3 ~/.config/scripts/gcom.py\n'
-bindkey '^f' '~/.config/scripts/dive\n'
-bindkey '^w' '~/.config/scripts/markdown\n'
-bindkey '^b' '~/.config/scripts/menu-tui\n'
-bindkey '^e' '~/.config/scripts/fuzzcat\n'
+bindkey '^g' 'python3 ~/.config/scripts/forge.py \n'
+bindkey '^v' 'python3 ~/.config/scripts/gcom.py \n'
+bindkey '^f' '~/.config/scripts/dive \n'
+bindkey '^w' '~/.config/scripts/markdown \n'
+bindkey '^b' '~/.config/scripts/menu-tui \n'
+bindkey '^e' '~/.config/scripts/fuzzcat \n'
 bindkey '^j' history-search-forward
 bindkey '^[w' kill-region
 

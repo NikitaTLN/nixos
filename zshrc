@@ -26,24 +26,32 @@ zinit snippet OMZP::kubectl
 zinit snippet OMZP::kubectx
 zinit snippet OMZP::command-not-found
 
-# Load completions
 autoload -Uz compinit && compinit
 
 zinit cdreplay -q
 
 eval "$(oh-my-posh init zsh --config $HOME/.config/omp/config.toml)"
 
-# Keybindings
-bindkey -e
+bindkey -v
+
+run-shell-command() {
+  zle -I 
+  eval "$@"
+  zle reset-prompt
+}
+
+zle -N run-shell-command
+
 bindkey '^k' history-search-backward
-bindkey '^g' 'python3 ~/.config/scripts/forge.py \n'
-bindkey '^v' 'python3 ~/.config/scripts/gcom.py \n'
-bindkey '^f' '~/.config/scripts/dive \n'
-bindkey '^w' '~/.config/scripts/markdown \n'
-bindkey '^b' '~/.config/scripts/menu-tui \n'
-bindkey '^e' '~/.config/scripts/fuzzcat \n'
+bindkey '^g' 'run-shell-command python3 $HOME/.config/scripts/forge.py'
+bindkey '^v' 'run-shell-command python3 $HOME/.config/scripts/gcom.py'
+bindkey '^f' 'run-shell-command $HOME/.config/scripts/dive'
+bindkey '^w' 'run-shell-command $HOME/.config/scripts/markdown'
+bindkey '^b' 'run-shell-command $HOME/.config/scripts/menu-tui'
+bindkey '^e' 'run-shell-command $HOME/.config/scripts/fuzzcat'
 bindkey '^j' history-search-forward
 bindkey '^[w' kill-region
+
 
 #if command -v tmux >/dev/null 2>&1; then
 #  if [ -z "$TMUX" ]; then

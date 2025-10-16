@@ -24,6 +24,10 @@ in
     inputs.zen-browser.homeModules.beta
   ];
 
+  programs.walker = {
+      enable = true;
+      runAsService = true;
+  };
   programs.zen-browser.enable = true;
   programs.quickshell.enable = true;
 
@@ -57,8 +61,6 @@ in
     pavucontrol
     viber
     cava
-    walker
-    elephant
     (pkgs.writeShellApplication {
       name = "ns";
       runtimeInputs = with pkgs; [

@@ -1,2 +1,17 @@
 #!/usr/bin/env bash
-sh $(ls ~/.config/scripts/ | fzf)
+
+if [ ! -d ~/.config/scripts/ ]; then
+    echo "Error: Directory ~/.config/scripts/ does not exist."
+    exit 1
+fi
+
+showup=$(find ~/.config/scripts/ -maxdepth 1 -type f -exec basename {} \; | rofi -dmenu)
+
+if [ -n "$showup" ]; then
+    if [ -x ~/.config/scripts/"$showup" ]; then
+        sh ~/.config/scripts/"$showup"
+    else
+        echo "Error: Selected script is not executable or does not exist."
+        exit 1
+    fi
+fi

@@ -24,10 +24,7 @@ in
     inputs.zen-browser.homeModules.beta
   ];
 
-  programs.walker = {
-      enable = true;
-      runAsService = true;
-  };
+  services.walker.enable = true;
   programs.zen-browser.enable = true;
   programs.quickshell.enable = true;
 

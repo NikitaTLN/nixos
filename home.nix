@@ -57,6 +57,7 @@ in
     pavucontrol
     viber
     cava
+    walker
     (pkgs.writeShellApplication {
       name = "ns";
       runtimeInputs = with pkgs; [

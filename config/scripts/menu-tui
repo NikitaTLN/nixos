@@ -5,7 +5,7 @@ if [ ! -d ~/.config/scripts/ ]; then
     exit 1
 fi
 
-showup=$(find ~/.config/scripts/ -maxdepth 1 -type f -exec basename {} \; | rofi -dmenu)
+showup=$(find ~/.config/scripts/ -maxdepth 1 -type f -exec basename {} \; | wofi --dmenu)
 
 if [ -n "$showup" ]; then
     if [ -x ~/.config/scripts/"$showup" ]; then

@@ -58,6 +58,7 @@ in
     pavucontrol
     viber
     cava
+    obsidian
     (pkgs.writeShellApplication {
       name = "ns";
       runtimeInputs = with pkgs; [

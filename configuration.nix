@@ -41,7 +41,6 @@
 
   time.timeZone = "Europe/Madrid";
 
-  virtualisation.vmware.host.enable = true;
   programs.virt-manager.enable = true;
   users.groups.libvirtd.members = ["w1dget"];
   virtualisation.libvirtd.enable = true;

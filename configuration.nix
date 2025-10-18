@@ -42,6 +42,7 @@
   time.timeZone = "Europe/Madrid";
 
   programs.virt-manager.enable = true;
+  programs.virtualbox.enable = true;
   users.groups.libvirtd.members = ["w1dget"];
   virtualisation.libvirtd.enable = true;
   virtualisation.spiceUSBRedirection.enable = true;

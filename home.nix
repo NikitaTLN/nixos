@@ -27,10 +27,6 @@ in
   services.walker.enable = true;
   programs.zen-browser.enable = true;
   programs.quickshell.enable = true;
-  programs.virt-manager.enable = true;
-  users.groups.libvirtd.members = ["w1dget"];
-  virtualisation.libvirtd.enable = true;
-  virtualisation.spiceUSBRedirection.enable = true;
   home.username = "w1dget";
   home.homeDirectory = "/home/w1dget";
   home.stateVersion = "25.05";

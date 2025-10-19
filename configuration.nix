@@ -135,6 +135,8 @@
     rpi-imager
     dotnet-sdk_9
     dotnet-runtime_9
+    mono
+    msbuild
     unzip
   ];
 

@@ -133,7 +133,8 @@
     cliphist
     wl-clipboard-rs
     rpi-imager
-    dotnet-sdk
+    dotnet-sdk_9
+    dotnet-runtime_9
     unzip
   ];
 

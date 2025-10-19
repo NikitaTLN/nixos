@@ -134,6 +134,7 @@
     wl-clipboard-rs
     rpi-imager
     dotnet-sdk
+    unzip
   ];
 
   programs.appimage = {

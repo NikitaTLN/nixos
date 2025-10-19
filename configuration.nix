@@ -88,6 +88,7 @@
   };
 
   environment.systemPackages = with pkgs; [
+    pnpm
     vim
     wget
     git

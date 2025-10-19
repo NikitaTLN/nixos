@@ -133,6 +133,7 @@
     cliphist
     wl-clipboard-rs
     rpi-imager
+    dotnet-sdk
   ];
 
   programs.appimage = {

@@ -60,6 +60,7 @@ in
     viber
     cava
     obsidian
+    localsend
     (pkgs.writeShellApplication {
       name = "ns";
       runtimeInputs = with pkgs; [

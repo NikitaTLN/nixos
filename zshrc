@@ -73,6 +73,7 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 
 alias vim='nvim'
+alias v="nvim -c Telescope find_files"
 alias ls='eza -a -1 --color=always --icons=always'
 alias et='eza -a -1 --color=always --icons=always -T'
 alias build="sudo nixos-rebuild --flake ~/nixos#nixos-btw --impure switch"

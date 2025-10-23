@@ -38,6 +38,7 @@ in
   home.file.".icons".source = "${config.home.homeDirectory}/nixos/icons";
   home.file."~/Documents/Obsidian Vault".source = "${config.home.homeDirectory}/nixos/ObsidianVault";
   home.packages = with pkgs; [
+    loupe
     unityhub
     tree
     fastfetch

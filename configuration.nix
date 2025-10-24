@@ -45,6 +45,7 @@
   users.groups.libvirtd.members = ["w1dget"];
   virtualisation.libvirtd.enable = true;
   virtualisation.spiceUSBRedirection.enable = true;
+  virtualisation.docker.enable = true;
 
   services.displayManager.ly.enable = true;
 
@@ -88,7 +89,6 @@
   };
 
   environment.systemPackages = with pkgs; [
-    docker
     docker-compose
     pnpm
     vim

@@ -88,6 +88,8 @@
   };
 
   environment.systemPackages = with pkgs; [
+    docker
+    docker-compose
     pnpm
     vim
     wget

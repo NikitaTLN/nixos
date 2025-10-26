@@ -7,6 +7,7 @@ let
     hypr = "hypr";
     omp = "omp";
     nvim = "nvim";
+    fastfetch = "fastfetch";
     ghostty = "ghostty";
     wofi = "wofi";
     rofi = "rofi";

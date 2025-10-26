@@ -15,5 +15,8 @@ theme=TokyoNight Storm
 
 confirm-close-surface = false
 
+cursor-style = bar
 custom-shader = shaders/cursor_smear.glsl
+#custom-shader = shaders/cursor_smear_tapered.glsl
+#custom-shader = shaders/cursor_smear_no_trail.glsl
 cursor-style-blink = false

@@ -22,7 +22,7 @@ in
 {
   imports = [
     inputs.zen-browser.homeModules.beta
-    inputs.hyprlauncher
+    inputs.hyprlauncher.modules.homeManager.default
   ];
 
   services.walker.enable = true;

@@ -17,7 +17,7 @@
         };
     };
 
-    outputs = { self, nixpkgs, home-manager, zen-browser, ... } @ inputs: {
+    outputs = { self, nixpkgs, home-manager, zen-browser, hyprlauncher, ... } @ inputs: {
         nixosConfigurations.nixos-btw = nixpkgs.lib.nixosSystem {
             system = "x86_64-linux";
             specialArgs = { inherit inputs; };

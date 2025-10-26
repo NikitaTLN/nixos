@@ -22,7 +22,6 @@ in
 {
   imports = [
     inputs.zen-browser.homeModules.beta
-    inputs.hyprlauncher.homeModules.beta
   ];
 
   services.walker.enable = true;
@@ -38,9 +37,6 @@ in
   home.file.".themes".source = "${config.home.homeDirectory}/nixos/themes";
   home.file.".icons".source = "${config.home.homeDirectory}/nixos/icons";
   home.file."~/Documents/Obsidian Vault".source = "${config.home.homeDirectory}/nixos/ObsidianVault";
-  home.packages = [
-      inputs.hyprlauncher.packages.${pkgs.system}.default
-  ];
   home.packages = with pkgs; [
     loupe
     unityhub
@@ -66,6 +62,7 @@ in
     cava
     obsidian
     localsend
+    inputs.hyprlauncher.packages.${pkgs.system}.default
     (pkgs.writeShellApplication {
       name = "ns";
       runtimeInputs = with pkgs; [

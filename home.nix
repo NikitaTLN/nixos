@@ -22,6 +22,7 @@ in
 {
   imports = [
     inputs.zen-browser.homeModules.beta
+    inputs.hyprlauncher
   ];
 
   services.walker.enable = true;
@@ -45,7 +46,6 @@ in
     eza
     zoxide
     hyprpicker
-    hyprlauncher
     hyprshot
     hyprlock
     wlogout

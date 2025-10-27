@@ -23,6 +23,7 @@ in
 {
   imports = [
     inputs.zen-browser.homeModules.beta
+    inputs.caelestia-shell.homeModules.default
   ];
 
 

@@ -64,6 +64,7 @@ in
     obsidian
     localsend
     libnotify
+    code-cursor
     inputs.hyprlauncher.packages.${pkgs.system}.default
     inputs.caelestia-shell.packages.${pkgs.system}.default
     (pkgs.writeShellApplication {

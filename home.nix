@@ -25,29 +25,6 @@ in
     inputs.zen-browser.homeModules.beta
   ];
 
-
-#  programs.caelestia = {
-#    enable = true;
-#    systemd = {
-#      enable = false; # if you prefer starting from your compositor
-#      target = "graphical-session.target";
-#      environment = [];
-#    };
-#    settings = {
-#      bar.status = {
-#        showBattery = false;
-#      };
-#      paths.wallpaperDir = "~/.config/walls/";
-#    };
-#    cli = {
-#      enable = true; # Also add caelestia-cli to path
-#      settings = {
-#        theme.enableGtk = false;
-#      };
-#    };
-#  };
-
-
   services.walker.enable = true;
   programs.zen-browser.enable = true;
   programs.quickshell.enable = true;
@@ -86,6 +63,7 @@ in
     cava
     obsidian
     localsend
+    libnotify
     inputs.hyprlauncher.packages.${pkgs.system}.default
     inputs.caelestia-shell.packages.${pkgs.system}.default
     (pkgs.writeShellApplication {

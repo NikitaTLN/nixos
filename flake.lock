@@ -33,6 +33,52 @@
         "type": "github"
       }
     },
+    "caelestia-cli": {
+      "inputs": {
+        "caelestia-shell": [
+          "caelestia-shell"
+        ],
+        "nixpkgs": [
+          "caelestia-shell",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1761392494,
+        "narHash": "sha256-Xabw0gwVYKY158DyhNlKopAhjAw54wu7Ws0SmVVrjVA=",
+        "owner": "caelestia-dots",
+        "repo": "cli",
+        "rev": "cc458bf8598c0beab27b5dc4331b0cf2ee654165",
+        "type": "github"
+      },
+      "original": {
+        "owner": "caelestia-dots",
+        "repo": "cli",
+        "type": "github"
+      }
+    },
+    "caelestia-shell": {
+      "inputs": {
+        "caelestia-cli": "caelestia-cli",
+        "nixpkgs": [
+          "nixpkgs"
+        ],
+        "quickshell": "quickshell"
+      },
+      "locked": {
+        "lastModified": 1761441765,
+        "narHash": "sha256-Y7JEdMOz3DKQTCm0KZLjg0AQATlUpnHtyJCyxNTEYXo=",
+        "owner": "caelestia-dots",
+        "repo": "shell",
+        "rev": "210e0b6a682e1f09a1604b37050edf25f60ac8fe",
+        "type": "github"
+      },
+      "original": {
+        "owner": "caelestia-dots",
+        "repo": "shell",
+        "type": "github"
+      }
+    },
     "home-manager": {
       "inputs": {
         "nixpkgs": [
@@ -328,8 +374,30 @@
         "type": "indirect"
       }
     },
+    "quickshell": {
+      "inputs": {
+        "nixpkgs": [
+          "caelestia-shell",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1760822546,
+        "narHash": "sha256-cy3wJQQzQbZ/EYUfTDuMiP/haPOjkqGgWOPPl7K9oiM=",
+        "ref": "refs/heads/master",
+        "rev": "3e2ce40b18af943f9ba370ed73565e9f487663ef",
+        "revCount": 697,
+        "type": "git",
+        "url": "https://git.outfoxxed.me/outfoxxed/quickshell"
+      },
+      "original": {
+        "type": "git",
+        "url": "https://git.outfoxxed.me/outfoxxed/quickshell"
+      }
+    },
     "root": {
       "inputs": {
+        "caelestia-shell": "caelestia-shell",
         "home-manager": "home-manager",
         "hyprlauncher": "hyprlauncher",
         "nixpkgs": "nixpkgs",

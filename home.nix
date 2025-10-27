@@ -63,6 +63,7 @@ in
     cava
     obsidian
     localsend
+    inputs.caelestia-shell.packages.${pkgs.system}.default
     inputs.hyprlauncher.packages.${pkgs.system}.default
     (pkgs.writeShellApplication {
       name = "ns";

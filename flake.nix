@@ -15,9 +15,13 @@
             url = "github:hyprwm/hyprlauncher";
             inputs.nixpkgs.follows = "nixpkgs";
         };
+        caelestia-shell = {
+            url = "github:caelestia-dots/shell";
+            inputs.nixpkgs.follows = "nixpkgs";
+        };
     };
 
-    outputs = { self, nixpkgs, home-manager, zen-browser, hyprlauncher, ... } @ inputs: {
+    outputs = { self, nixpkgs, home-manager, zen-browser, hyprlauncher, caelestia-shell, ... } @ inputs: {
         nixosConfigurations.nixos-btw = nixpkgs.lib.nixosSystem {
             system = "x86_64-linux";
             specialArgs = { inherit inputs; };

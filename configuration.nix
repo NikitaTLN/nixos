@@ -46,6 +46,7 @@
   virtualisation.libvirtd.enable = true;
   virtualisation.spiceUSBRedirection.enable = true;
   virtualisation.docker.enable = true;
+  hardware.bluetooth.enable = true;
 
   services.displayManager.ly.enable = true;
 

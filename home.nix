@@ -46,6 +46,7 @@ in
     eza
     zoxide
     hyprpicker
+    gettext
     hyprshot
     hyprlock
     wlogout

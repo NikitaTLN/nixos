@@ -97,6 +97,7 @@
     wget
     git
     curl
+    prismlauncher
     ghostty
     fd
     efibootmgr

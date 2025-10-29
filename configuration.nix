@@ -80,7 +80,7 @@
     enable32Bit = true;
   };
   hardware.mwProCapture.enable = true;
-
+  programs.flatpak.enable = true;
   programs.firefox.enable = true;
   programs.zsh.enable = true;
 
@@ -99,7 +99,6 @@
     curl
     ghostty
     fd
-    flatpak
     efibootmgr
     gh
     neovim

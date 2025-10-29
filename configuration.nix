@@ -90,6 +90,7 @@
   };
 
   environment.systemPackages = with pkgs; [
+    wine
     docker-compose
     pnpm
     vim

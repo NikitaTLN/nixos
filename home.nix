@@ -30,7 +30,6 @@ in
   programs.zen-browser.enable = true;
   programs.dankMaterialShell = {
     enable = true;
-    quickshell.package = quickshell.packages.${pkgs.system}.default;
   };
   home.username = "w1dget";
   home.homeDirectory = "/home/w1dget";

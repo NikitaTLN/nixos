@@ -29,7 +29,7 @@ in
   services.walker.enable = true;
   programs.zen-browser.enable = true;
   programs.dankMaterialShell.enable = true;
-  programs.quickshell.enable = true;
+#  programs.quickshell.enable = true;
   home.username = "w1dget";
   home.homeDirectory = "/home/w1dget";
   home.stateVersion = "25.05";

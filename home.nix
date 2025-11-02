@@ -63,6 +63,7 @@ in
     discord
     pavucontrol
     viber
+    solaar
     cava
     obsidian
     localsend

@@ -1,4 +1,4 @@
-{ config, pkgs, system, inputs, ... }:
+{ config, pkgs, system, inputs, quickshell, darkMaterialShell, ... }:
 let
   dotfiles = "${config.home.homeDirectory}/nixos/config";
   create_symlink = path: config.lib.file.mkOutOfStoreSymlink path;
@@ -24,12 +24,15 @@ in
   imports = [
     inputs.zen-browser.homeModules.beta
     inputs.dankMaterialShell.homeModules.dankMaterialShell.default
+    inputs.dankMaterialShell.homeModules.dankMaterialShell.hyprland
   ];
 
   services.walker.enable = true;
   programs.zen-browser.enable = true;
-  programs.dankMaterialShell.enable = true;
-#  programs.quickshell.enable = true;
+  programs.dankMaterialShell = {
+    enable = true;
+    quickshell.package = quickshell.packages.${pkgs.system}.default;
+  };
   home.username = "w1dget";
   home.homeDirectory = "/home/w1dget";
   home.stateVersion = "25.05";

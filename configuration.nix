@@ -127,17 +127,11 @@
     cargo
     rustc
     pkg-config
-    vial
-    qmk
-    qmk-udev-rules
-    qmk_hid
-    via
     jq
     ungoogled-chromium
     sbctl
     cliphist
     wl-clipboard-rs
-    rpi-imager
     dotnet-sdk_9
     dotnet-runtime_9
     mono

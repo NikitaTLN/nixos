@@ -15,13 +15,23 @@
             url = "github:hyprwm/hyprlauncher";
             inputs.nixpkgs.follows = "nixpkgs";
         };
-        caelestia-shell = {
-            url = "github:caelestia-dots/shell";
+        dgop = {
+            url = "github:AvengeMedia/dgop";
             inputs.nixpkgs.follows = "nixpkgs";
+        };
+        dms-cli = {
+            url = "github:AvengeMedia/danklinux";
+            inputs.nixpkgs.follows = "nixpkgs";
+        };
+        dankMaterialShell = {
+            url = "github:AvengeMedia/DankMaterialShell";
+            inputs.nixpkgs.follows = "nixpkgs";
+            inputs.dgop.follows = "dgop";
+            inputs.dms-cli.follows = "dms-cli";
         };
     };
 
-    outputs = { self, nixpkgs, home-manager, zen-browser, hyprlauncher, caelestia-shell, ... } @ inputs: {
+    outputs = { self, nixpkgs, home-manager, zen-browser, hyprlauncher, dgop, dms-cli, dankMaterialShell, ... } @ inputs: {
         nixosConfigurations.nixos-btw = nixpkgs.lib.nixosSystem {
             system = "x86_64-linux";
             specialArgs = { inherit inputs; };

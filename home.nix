@@ -16,8 +16,8 @@ let
     mako = "mako";
     walls = "walls";
     scripts = "scripts";
-#    quickshell = "quickshell";
     walker = "walker";
+    hyprshell = "hyprshell";
   };
 in
 {

@@ -18,6 +18,7 @@ let
     scripts = "scripts";
     walker = "walker";
     hyprshell = "hyprshell";
+    eww = "eww";
   };
 in
 {
@@ -49,6 +50,7 @@ in
     zoxide
     hyprpicker
     gettext
+    eww
     hyprshot
     hyprlock
     wlogout

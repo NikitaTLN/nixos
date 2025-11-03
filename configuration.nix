@@ -122,6 +122,7 @@
     tmux
     uwsm
     xdg-utils
+    hyprshell
     appimage-run
     python3
     go

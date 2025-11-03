@@ -16,7 +16,7 @@ let
     mako = "mako";
     walls = "walls";
     scripts = "scripts";
-    quickshell = "quickshell";
+#    quickshell = "quickshell";
     walker = "walker";
   };
 in

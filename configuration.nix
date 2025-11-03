@@ -41,6 +41,7 @@
   networking.networkmanager.enable = true;
 
   time.timeZone = "Europe/Madrid";
+  services.openssh.enable = true;
 
   programs.virt-manager.enable = true;
   users.groups.libvirtd.members = ["w1dget"];

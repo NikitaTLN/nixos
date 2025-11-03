@@ -1,20 +1,20 @@
 /** Global *******************************************/
 *{
 	all: unset;
-	font-family: feather;
-	font-family: Iosevka;
+	font-family: CaskaydiaMono Nerd Font Mono;
+	font-family: CaskaydiaMono Nerd Font Mono;
 }
 
-/** Background ***************************************/
+/** Background **************************************
 .bg {
 	background-image: url("images/bg.png");
 	background-color: #474D59;
 	opacity: 1;
-} 
+} */
 
 /** Generic window ***********************************/
 .genwin {
-	background-color: #1d2021;
+	background-color: #15161E;
 	border-radius: 16px;
 }
 
@@ -28,13 +28,13 @@
 }
 
 .fullname {
-	color: #cc241d;
+	color: #ef596f;
 	font-size : 30px;
 	font-weight : bold;
 }
 
 .username {
-	color: #076678;
+	color: #6BB2C0;
 	font-size : 22px;
 	font-weight : bold;
 	margin : -15px 0px 0px 0px;
@@ -46,21 +46,21 @@
 	font-weight : normal;
 }
 .iconcpu {
-	color: #fb4934;
+	color: #f7768e;
 }
 .iconmem {
-	color: #b8bb26;
+	color: #9ece6a;
 }
 .iconbright {
-	color: #fabd2f;
+	color: #e0af68;
 }
 .iconbat {
-	color: #076678;
+	color: #7aa2f7;
 }
 
 .cpu_bar, .mem_bar, .bright_bar, .bat_bar, scale trough {
 	all: unset;
-	background-color: #282828;
+	background-color: #282C34;
 	border-radius: 16px;
 	min-height: 28px;
 	min-width: 240px;
@@ -72,21 +72,21 @@
 }
 
 .cpu_bar scale trough highlight {
-	background-color: #fb4934;
+	background-color: #f7768e;
 }
 .mem_bar scale trough highlight {
-	background-color: #b8bb26;
+	background-color: #9ece6a;
 }
 .bright_bar scale trough highlight {
-	background-color: #fabd2f;
+	background-color: #e0af68;
 }
 .bat_bar scale trough highlight {
-	background-color: #076678;
+	background-color: #7aa2f7;
 }
 
 /** Clock ********************************************/
 .time_hour, .time_min {
-	color: #458588;
+	color: #7dcfff;
 	font-size : 70px;
 	font-weight : bold;
 }
@@ -98,14 +98,14 @@
 }
 
 .time_mer {
-	color: #b8bb26;
+	color: #9ece6a;
 	font-size : 40px;
 	font-weight : bold;
 	margin : 20px 0px 0px 0px;
 }
 
 .time_day {
-	color: #fabd2f;
+	color: #e0af68;
 	font-size : 30px;
 	font-weight : normal;
 	margin : 0px 0px 20px -20px;
@@ -113,19 +113,19 @@
 
 /** Uptime ********************************************/
 .icontimer {
-	color: #b16286;
+	color: #bb9af7;
 	font-size : 90px;
 	font-weight : normal;
 }
 
 .uphour {
-	color: #f9f5d7;
+	color: #c0caf5;
 	font-size : 42px;
 	font-weight : bold;
 }
 
 .upmin {
-	color: #f9f5d7;
+	color: #c0caf5;
 	font-size : 32px;
 	font-weight : bold;
 }
@@ -147,39 +147,39 @@
 }
 
 .artist {
-	color: #fabd2f;
+	color: #e0af68;
 	font-size : 16px;
 	font-weight : normal;
 	margin : 0px 0px 15px 0px;
 }
 
 .btn_prev, .btn_play, .btn_next {
-	font-family: Iosevka Nerd Font;
+	font-family: CaskaydiaMono Nerd Font Mono;
 }
 .btn_prev {
-	color: #fabd2f;
+	color: #e0af68;
 	font-size : 32px;
 	font-weight : normal;
 }
 .btn_play {
-	color: #b8bb26;
+	color: #9ece6a;
 	font-size : 48px;
 	font-weight : bold;
 }
 .btn_next {
-	color: #fabd2f;
+	color: #e0af68;
 	font-size : 32px;
 	font-weight : normal;
 }
 
 .music_bar scale trough highlight {
 	all: unset;
-	background-color: #b16286;
+	background-color: #bb9af7;
 	border-radius: 8px;
 }
 .music_bar scale trough {
 	all: unset;
-	background-color: #282828;
+	background-color: #282C34;
 	border-radius: 8px;
 	min-height: 20px;
 	min-width: 310px;
@@ -188,21 +188,21 @@
 
 /** Weather ***************************************/
 .iconweather {
-	font-family: Iosevka Nerd Font;
+	font-family: CaskaydiaMono Nerd Font Mono;
 	font-size : 120px;
 	font-weight : normal;
 	margin : 15px 0px 0px 30px;
 }
 
 .label_temp {
-	color : #458588;
+	color : #7dcfff;
 	font-size : 80px;
 	font-weight : bold;
 	margin : -15px 30px 0px 0px;
 }
 
 .label_stat {
-	color : #fb4934;
+	color : #f7768e;
 	font-size : 38px;
 	font-weight : bold;
 }
@@ -240,7 +240,7 @@
 /** Links ***************************************/
 .iconweb, .iconmail {
 	color: #FFFFFF;
-	font-family: Iosevka Nerd Font;
+	font-family: CaskaydiaMono Nerd Font Mono;
 	font-size : 70px;
 	font-weight : normal;
 }
@@ -288,66 +288,66 @@
 }
 
 .btn_logout {
-	color: #fb4934;
+	color: #f7768e;
 }
 .btn_sleep {
-	color: #b8bb26;
+	color: #9ece6a;
 }
 .btn_reboot {
-	color: #fabd2f;
+	color: #e0af68;
 }
 .btn_poweroff {
-	color: #076678;
+	color: #7aa2f7;
 }
 
 /** Home folders ***************************************/
 .hddbox {
-	background-color: #282828;
+	background-color: #282C34;
 	border-radius: 10px;
 	margin : 15px;
 }
 .hddicon {
-	color: #458588;
-	font-family: Iosevka Nerd Font;
+	color: #7dcfff;
+	font-family: CaskaydiaMono Nerd Font Mono;
 	font-size : 70px;
 	font-weight : normal;
 	margin : 25px 20px 25px 40px;
 }
 .hdd_label {
-	color: #f9f5d7;
+	color: #c0caf5;
 	font-size : 48px;
 	font-weight : bold;
 	margin : 0px 0px 0px 15px;
 }
 .fs_sep {
-	color: #1d2021;
+	color: #15161E;
 	font-size : 36px;
 	font-weight : bold;
 }
 
 .iconfolder1, .iconfolder2, .iconfolder3, .iconfolder4, .iconfolder5, .iconfolder6  {
-	font-family: Iosevka Nerd Font;
+	font-family: CaskaydiaMono Nerd Font Mono;
 	font-size : 32px;
 	font-weight : normal;
 	margin : 0px 0px 0px 75px;
 }
 .iconfolder1 {
-	color: #fb4934;
+	color: #f7768e;
 }
 .iconfolder2 {
-	color: #b8bb26;
+	color: #9ece6a;
 }
 .iconfolder3 {
-	color: #fabd2f;
+	color: #e0af68;
 }
 .iconfolder4 {
-	color: #458588;
+	color: #7dcfff;
 }
 .iconfolder5 {
-	color: #b16286;
+	color: #bb9af7;
 }
 .iconfolder6 {
-	color: #076678;
+	color: #7aa2f7;
 }
 
 .label_folder1, .label_folder2, .label_folder3, .label_folder4, .label_folder5, .label_folder6  {
@@ -356,22 +356,22 @@
 	margin : 0px 0px 0px 30px;
 }
 .label_folder1 {
-	color: #fb4934;
+	color: #f7768e;
 }
 .label_folder2 {
-	color: #b8bb26;
+	color: #9ece6a;
 }
 .label_folder3 {
-	color: #fabd2f;
+	color: #e0af68;
 }
 .label_folder4 {
-	color: #458588;
+	color: #7dcfff;
 }
 .label_folder5 {
-	color: #b16286;
+	color: #bb9af7;
 }
 .label_folder6 {
-	color: #076678;
+	color: #7aa2f7;
 }
 
 /** EOF *************************************************/

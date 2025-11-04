@@ -71,6 +71,7 @@ in
     hyprshot
     hyprlock
     wlogout
+    meson
     hyprpaper
     networkmanagerapplet
     rofi

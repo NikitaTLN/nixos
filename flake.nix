@@ -29,9 +29,12 @@
             inputs.dgop.follows = "dgop";
             inputs.dms-cli.follows = "dms-cli";
         };
+        nixcord = {
+            url = "github:kaylorben/nixcord";
+        };
     };
 
-    outputs = { self, nixpkgs, home-manager, zen-browser, hyprlauncher, dgop, dms-cli, dankMaterialShell, ... } @ inputs: {
+    outputs = { self, nixpkgs, home-manager, zen-browser, hyprlauncher, dgop, dms-cli, dankMaterialShell, nixcord, ... } @ inputs: {
         nixosConfigurations.nixos-btw = nixpkgs.lib.nixosSystem {
             system = "x86_64-linux";
             specialArgs = { inherit inputs; };

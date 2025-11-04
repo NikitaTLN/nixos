@@ -25,7 +25,21 @@ in
   imports = [
     inputs.zen-browser.homeModules.beta
     inputs.dankMaterialShell.homeModules.dankMaterialShell.default
+    inputs.nixcord.homeModules.nixcord
   ];
+
+
+  programs.nixcord = {
+    enable = true;  
+    vesktop.enable = true;
+    dorion.enable = true;
+    config = {
+        plugins = {
+            fakeNitro.enable = true;
+        };
+    };
+  };
+
 
   services.walker.enable = true;
   programs.zen-browser.enable = true;

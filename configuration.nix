@@ -44,6 +44,7 @@
   services.openssh.enable = true;
 
   programs.virt-manager.enable = true;
+  programs.nix-ld.enable = true;
   users.groups.libvirtd.members = ["w1dget"];
   virtualisation.libvirtd.enable = true;
   virtualisation.spiceUSBRedirection.enable = true;

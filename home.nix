@@ -31,7 +31,10 @@ in
 
   programs.nixcord = {
     enable = true;  
-    vesktop.enable = true;
+    vesktop = {
+        enable = true;
+        useSystemVencord = false;
+    };
     dorion.enable = true;
     config = {
         plugins = {

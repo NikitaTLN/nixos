@@ -98,6 +98,7 @@
     pnpm
     vim
     wget
+    vencord
     git
     curl
     prismlauncher

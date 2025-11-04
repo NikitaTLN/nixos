@@ -76,7 +76,6 @@ in
     waybar
     bat
     btop
-    discord
     pavucontrol
     viber
     solaar

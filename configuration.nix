@@ -11,6 +11,11 @@
   services.tailscale.enable = true;
   i18n.defaultLocale = "ru_RU.UTF-8";
 
+
+  services.udev.extraRules = ''
+    KERNEL=="hidraw*", SUBSYSTEM=="hidraw", ATTRS{idVendor}=="6964", ATTRS{idProduct}=="0075", MODE="0660", GROUP="users", TAG+="uaccess", TAG+="udev-acl" 
+  '';
+
   boot.loader = {
     efi = {
       canTouchEfiVariables = true;

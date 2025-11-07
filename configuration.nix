@@ -12,15 +12,15 @@
   i18n.defaultLocale = "ru_RU.UTF-8";
 
 
-  services.udev = {
-      packages = with pkgs; [
-        qmk
-        qmk-udev-rules
-        qmk_hid
-        via
-        vial
-      ];
-  };
+#  services.udev = {
+#      packages = with pkgs; [
+#        qmk
+#        qmk-udev-rules
+#        qmk_hid
+#        via
+#        vial
+#      ];
+#  };
 
 
   boot.loader = {
@@ -113,6 +113,11 @@
     git
     curl
     prismlauncher
+    qmk
+    qmk-udev-rules
+    qmk_hid
+    via
+    vial
     ghostty
     fd
     efibootmgr

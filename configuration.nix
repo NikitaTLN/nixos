@@ -78,8 +78,6 @@
   users.users.w1dget = {
     isNormalUser = true;
     extraGroups = [ "wheel" ];
-    packages = with pkgs; [
-    ];
   };
   users.defaultUserShell = pkgs.zsh;
 

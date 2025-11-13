@@ -32,9 +32,12 @@
         nixcord = {
             url = "github:kaylorben/nixcord";
         };
+        helium = {
+            url = "github:FKouhai/helium2nix/main";
+        };
     };
 
-    outputs = { self, nixpkgs, home-manager, zen-browser, hyprlauncher, dgop, dms-cli, dankMaterialShell, nixcord, ... } @ inputs: {
+    outputs = { self, nixpkgs, home-manager, helium, zen-browser, hyprlauncher, dgop, dms-cli, dankMaterialShell, nixcord, ... } @ inputs: {
         nixosConfigurations.nixos-btw = nixpkgs.lib.nixosSystem {
             system = "x86_64-linux";
             specialArgs = { inherit inputs; };

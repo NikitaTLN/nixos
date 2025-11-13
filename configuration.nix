@@ -156,6 +156,7 @@
     mono
     msbuild
     unzip
+    inputs.helium.defaultPackage.${system}
   ];
 
   programs.appimage = {

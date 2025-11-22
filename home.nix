@@ -68,7 +68,6 @@ in
     zoxide
     hyprpicker
     gettext
-    eww
     hyprshot
     hyprlock
     wlogout
@@ -83,12 +82,10 @@ in
     btop
     pavucontrol
     viber
-    solaar
     cava
     obsidian
     localsend
     libnotify
-    code-cursor
     inputs.hyprlauncher.packages.${pkgs.system}.default
     (pkgs.writeShellApplication {
       name = "ns";

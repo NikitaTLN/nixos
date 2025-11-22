@@ -114,11 +114,6 @@
     git
     curl
     prismlauncher
-    qmk
-    qmk-udev-rules
-    qmk_hid
-    via
-    vial
     ghostty
     fd
     efibootmgr
@@ -142,7 +137,6 @@
     tmux
     uwsm
     xdg-utils
-    hyprshell
     appimage-run
     python3
     go
@@ -150,7 +144,6 @@
     rustc
     pkg-config
     jq
-    ungoogled-chromium
     sbctl
     cliphist
     wl-clipboard-rs

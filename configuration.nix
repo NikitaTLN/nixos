@@ -33,6 +33,13 @@
     limine = {
       enable = true;
       secureBoot.enable = true;
+
+      settings = {
+        bootloaderPath = "/EFI/limine";      # where limine.cfg + kernels go
+        kernelsDir     = "/limine/kernels";  # keeps your existing layout
+        configFile     = "/limine/limine.conf";
+      };
+
       extraConfig = ''
           timeout = 30
           term_palette: 24273a;ed8796;a6da95;eed49f;8aadf4;f5bde6;8bd5ca;cad3f5

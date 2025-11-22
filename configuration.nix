@@ -31,6 +31,7 @@
     limine = {
       enable = true;
       secureBoot.enable = true;
+      panicOnChecksumMismatch = false;
       extraConfig = ''
           timeout = 30
           term_palette: 24273a;ed8796;a6da95;eed49f;8aadf4;f5bde6;8bd5ca;cad3f5

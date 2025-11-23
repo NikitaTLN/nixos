@@ -39,17 +39,17 @@ bindkey '^j' history-search-forward
 bindkey '^[w' kill-region
 bindkey -s '^g' "python3 $HOME/nixos/config/scripts/forge.py\n"
 bindkey -s '^v' "python3 $HOME/nixos/config/scripts/gcom.py\n"
-bindkey '^f' "$HOME/nixos/config/scripts/dive\n"
+bindkey -s '^f' "$HOME/nixos/config/scripts/dive\n"
 bindkey -s '^w' "$HOME/nixos/config/scripts/markdown\n"
 bindkey -s '^b' "$HOME/nixos/config/scripts/menu-tui\n"
 bindkey -s '^e' "$HOME/nixos/config/scripts/fuzzcat\n"
 
 
-#if command -v tmux >/dev/null 2>&1; then
-#  if [ -z "$TMUX" ]; then
-#    tmux attach -t workflow || tmux new -s workflow
-#  fi
-#fi
+if command -v tmux >/dev/null 2>&1; then
+  if [ -z "$TMUX" ]; then
+    tmux attach -t workflow || tmux new -s workflow
+  fi
+fi
 
 
 # History

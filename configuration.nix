@@ -57,6 +57,7 @@
 
   time.timeZone = "Europe/Madrid";
   services.openssh.enable = true;
+  programs.niri.enable = true;
 
   programs.virt-manager.enable = true;
   programs.nix-ld.enable = true;

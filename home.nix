@@ -19,6 +19,7 @@ let
     walker = "walker";
     hyprshell = "hyprshell";
     eww = "eww";
+    niri = "niri";
   };
 in
 {

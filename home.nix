@@ -28,6 +28,7 @@ in
     inputs.dankMaterialShell.homeModules.dankMaterialShell.default
     inputs.dankMaterialShell.homeModules.dankMaterialShell.niri
     inputs.nixcord.homeModules.nixcord
+    inputs.niri.homeModules.niri
   ];
 
 

@@ -202,8 +202,9 @@ binds {
     // shows a list of important hotkeys.
     Mod+Shift+Slash { show-hotkey-overlay; }
 
-    Mod+Return hotkey-overlay-title="Open a Terminal: alacritty" { spawn "ghostty"; }
+    Mod+Return hotkey-overlay-title="Open a Terminal: ghostty" { spawn "ghostty"; }
     Mod+B hotkey-overlay-title="Run a Browser: Helium" { spawn "helium"; }
+    Mod+Space hotkey-overlay-title="Run an application: fuzzel" { spawn "fuzzel"; }
 
     // Use spawn-sh to run a shell command. Do this if you need pipes, multiple commands, etc.
     // Note: the entire command goes as a single argument. It's passed verbatim to `sh -c`.

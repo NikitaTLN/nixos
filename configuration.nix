@@ -116,6 +116,7 @@
     curl
     prismlauncher
     ghostty
+    fuzzel
     fd
     efibootmgr
     gh

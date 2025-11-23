@@ -16,7 +16,7 @@ input {
         // dwtp
         // drag false
         // drag-lock
-        // natural-scroll
+        natural-scroll
         // accel-speed 0.2
         // accel-profile "flat"
         // scroll-method "two-finger"
@@ -24,7 +24,7 @@ input {
     }
 
     mouse {
- //       sensitivity -0.5
+        accel-speed -1
     }
 
     trackpoint {
@@ -116,8 +116,9 @@ layout {
 }
 
 // This line starts waybar, a commonly used bar for Wayland compositors.
-spawn-at-startup "bash -c \"wl-paste --type text --watch cliphist store &\""
-spawn-at-startup "bash -c \"wl-paste --type image --watch cliphist store &\""
+spawn-at-startup "bash" "-c" "wl-paste --type text --watch cliphist store &"
+spawn-at-startup "bash" "-c" "wl-paste --type image --watch cliphist store &"
+spawn-at-startup "dms" "run"
 
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
 // spawn-sh-at-startup "qs -c ~/source/qs/MyAwesomeShell"
@@ -150,7 +151,7 @@ animations {
     // off
 
     // Slow down all animations by this factor. Values below 1 speed them up instead.
-    // slowdown 3.0
+     //slowdown 1
 }
 
 // Window rules let you adjust behavior for individual windows.
@@ -172,7 +173,7 @@ window-rule {
     // This app-id regular expression will work for both:
     // - host Firefox (app-id is "firefox")
     // - Flatpak Firefox (app-id is "org.mozilla.firefox")
-    match app-id=r#"firefox$"# title="^Picture-in-Picture$"
+    match app-id=r#"helium$"# title="^Picture-in-Picture$"
     open-floating true
 }
 
@@ -204,8 +205,10 @@ binds {
 
     Mod+Return hotkey-overlay-title="Open a Terminal: ghostty" { spawn "ghostty"; }
     Mod+B hotkey-overlay-title="Run a Browser: Helium" { spawn "helium"; }
-    Mod+Space hotkey-overlay-title="Run an application: fuzzel" { spawn "fuzzel"; }
-
+//    Mod+Space hotkey-overlay-title="Run an application: fuzzel" { spawn "fuzzel"; }
+    Mod+Space hotkey-overlay-title="Application Launcher" {
+        spawn "dms" "ipc" "call" "spotlight" "toggle";
+    }
     // Use spawn-sh to run a shell command. Do this if you need pipes, multiple commands, etc.
     // Note: the entire command goes as a single argument. It's passed verbatim to `sh -c`.
     // For example, this is a standard bind to toggle the screen reader (orca).
@@ -246,16 +249,16 @@ binds {
     Mod+Ctrl+Up    { move-window-up; }
     Mod+Ctrl+Right { move-column-right; }
     Mod+Ctrl+H     { move-column-left; }
-    Mod+Ctrl+J     { move-window-down; }
-    Mod+Ctrl+K     { move-window-up; }
+//    Mod+Ctrl+J     { move-window-down; }
+//    Mod+Ctrl+K     { move-window-up; }
     Mod+Ctrl+L     { move-column-right; }
 
     // Alternative commands that move across workspaces when reaching
     // the first or last window in a column.
     Mod+J     { focus-window-or-workspace-down; }
     Mod+K     { focus-window-or-workspace-up; }
-    // Mod+Ctrl+J     { move-window-down-or-to-workspace-down; }
-    // Mod+Ctrl+K     { move-window-up-or-to-workspace-up; }
+    Mod+Ctrl+J     { move-window-down-or-to-workspace-down; }
+    Mod+Ctrl+K     { move-window-up-or-to-workspace-up; }
 
     Mod+Home { focus-column-first; }
     Mod+End  { focus-column-last; }

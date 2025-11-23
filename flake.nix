@@ -30,13 +30,9 @@
         helium = {
             url = "github:FKouhai/helium2nix/main";
         };
-        niri = {
-            url = "github:sodiboo/niri-flake";
-            inputs.nixpkgs.follows = "nixpkgs";
-        };
     };
 
-    outputs = { self, nixpkgs, home-manager, helium, niri, zen-browser, hyprlauncher, dgop, dankMaterialShell, nixcord, ... } @ inputs: {
+    outputs = { self, nixpkgs, home-manager, helium, zen-browser, hyprlauncher, dgop, dankMaterialShell, nixcord, ... } @ inputs: {
         nixosConfigurations.nixos-btw = nixpkgs.lib.nixosSystem {
             system = "x86_64-linux";
             specialArgs = { inherit inputs; };

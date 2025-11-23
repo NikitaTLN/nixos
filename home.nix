@@ -20,6 +20,7 @@ let
     hyprshell = "hyprshell";
     eww = "eww";
     niri = "niri";
+    fuzzel = "fuzzel";
   };
 in
 {

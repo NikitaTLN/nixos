@@ -116,7 +116,6 @@ layout {
 }
 
 // This line starts waybar, a commonly used bar for Wayland compositors.
-spawn-at-startup "dms run"
 spawn-at-startup "bash -c \"wl-paste --type text --watch cliphist store &\""
 spawn-at-startup "bash -c \"wl-paste --type image --watch cliphist store &\""
 
@@ -204,7 +203,6 @@ binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
 
     Mod+Return hotkey-overlay-title="Open a Terminal: alacritty" { spawn "ghostty"; }
-    Mod+Space hotkey-overlay-title="Run an Application: spotlight" { spawn "dms ipc call spotlight toggle"; }
     Mod+B hotkey-overlay-title="Run a Browser: Helium" { spawn "helium"; }
 
     // Use spawn-sh to run a shell command. Do this if you need pipes, multiple commands, etc.

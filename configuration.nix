@@ -118,6 +118,7 @@
     ghostty
     fuzzel
     fd
+    xwayland-satellite
     efibootmgr
     gh
     neovim

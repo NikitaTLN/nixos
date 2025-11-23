@@ -45,7 +45,7 @@
             "type": "wm",
             "key": "│ ├",
             "keyColor": "yellow",
-            "format": "Hyprland"
+            "format": "Niri"
         },
         {
             "type": "kernel",

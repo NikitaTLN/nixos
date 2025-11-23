@@ -49,6 +49,10 @@ in
   programs.zen-browser.enable = true;
   programs.dankMaterialShell = {
     enable = true;
+    niri = {
+        enableKeybinds = true;
+        enableSpawn = true;
+    };
   };
   home.username = "w1dget";
   home.homeDirectory = "/home/w1dget";

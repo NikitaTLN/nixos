@@ -45,11 +45,11 @@ bindkey -s '^b' "$HOME/nixos/config/scripts/menu-tui\n"
 bindkey -s '^e' "$HOME/nixos/config/scripts/fuzzcat\n"
 
 
-if command -v tmux >/dev/null 2>&1; then
-  if [ -z "$TMUX" ]; then
-    tmux attach -t workflow || tmux new -s workflow
-  fi
-fi
+#if command -v tmux >/dev/null 2>&1; then
+#  if [ -z "$TMUX" ]; then
+#    tmux attach -t workflow || tmux new -s workflow
+#  fi
+#fi
 
 
 # History

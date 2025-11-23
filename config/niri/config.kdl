@@ -5,8 +5,9 @@ input {
         repeat-delay 200
         repeat-rate 35
         xkb {
+            layout "us, ru, ee" 
+            options "grp:alt_shift_toggle"
         }
-        numlock
     }
 
     touchpad {

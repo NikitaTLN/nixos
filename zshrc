@@ -82,3 +82,4 @@ alias neofetch="~/.local/share/brrtfetch ~/.config/fastfetch/defaults/pedro.gif"
 # Shell integrations
 eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
+nitch

@@ -30,9 +30,12 @@
         helium = {
             url = "github:FKouhai/helium2nix/main";
         };
+        sfpro = {
+            url = "github:Lyndeno/apple-fonts.nix";
+        };
     };
 
-    outputs = { self, nixpkgs, home-manager, helium, zen-browser, hyprlauncher, dgop, dankMaterialShell, nixcord, ... } @ inputs: {
+    outputs = { self, nixpkgs, home-manager, sfpro, helium, zen-browser, hyprlauncher, dgop, dankMaterialShell, nixcord, ... } @ inputs: {
         nixosConfigurations.nixos-btw = nixpkgs.lib.nixosSystem {
             system = "x86_64-linux";
             specialArgs = { inherit inputs; };

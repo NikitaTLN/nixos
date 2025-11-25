@@ -103,6 +103,7 @@
     wget
     git
     curl
+    typioca
     prismlauncher
     nitch
     ghostty

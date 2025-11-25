@@ -4,14 +4,16 @@
 # reloaded while running; some only apply to new windows and others may require
 # a full restart to take effect.
 
-font-family = JetBrainsMono Nerd Font
+#font-family = JetBrainsMono Nerd Font
+font-family = CaskaydiaMono Nerd Font
 font-size = 15
 window-padding-x = 10
 window-padding-y = 10
 
-background-opacity = 0.85
+background-opacity = 1
 
-theme=TokyoNight Storm
+#theme=TokyoNight Storm
+theme=Everforest Dark Hard
 
 confirm-close-surface = false
 cursor-style = bar

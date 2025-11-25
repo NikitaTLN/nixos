@@ -104,6 +104,7 @@
     git
     curl
     prismlauncher
+    nitch
     ghostty
     fuzzel
     fd

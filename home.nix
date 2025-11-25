@@ -21,6 +21,7 @@ let
     eww = "eww";
     niri = "niri";
     fuzzel = "fuzzel";
+    DankMaterialShell = "DankMaterialShell";
   };
 in
 {

@@ -1,0 +1,11 @@
+{
+  "calculator": {
+    "enabled": true,
+    "trigger": "="
+  },
+  "webSearch": {
+    "enabled": true,
+    "defaultEngine": "duckduckgo",
+    "searchEngines": []
+  }
+}

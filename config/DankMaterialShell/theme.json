@@ -1,0 +1,42 @@
+{
+  "dark": {
+    "name": "Hotline Miami Dark",
+    "primary": "#c1c1c1",
+    "primaryText": "#ffffff",
+    "primaryContainer": "#a8a8a8",
+    "secondary": "#a8a8a8",
+    "surface": "#a8a8a8",
+    "surfaceText": "#a8a8a8",
+    "surfaceVariant": "#a8a8a8",
+    "surfaceVariantText": "#E0E0E0",
+    "surfaceTint": "#a8a8a8",
+    "background": "#a8a8a8",
+    "backgroundText": "#000000",
+    "outline": "#a8a8a8",
+    "surfaceContainer": "#0f1111",
+    "surfaceContainerHigh": "#0f1111",
+    "error": "#0f1111",
+    "warning": "#0f1111",
+    "info": "#0f1111"
+  },
+  "light": {
+    "name": "Hotline Miami Light",
+    "primary": "#CC0066",
+    "primaryText": "#FFFFFF",
+    "primaryContainer": "#a8a8a8",
+    "secondary": "#00CC66",
+    "surface": "#FFF0FF",
+    "surfaceText": "#1A0F1A",
+    "surfaceVariant": "#F0E6F0",
+    "surfaceVariantText": "#2D1A2D",
+    "surfaceTint": "#CC0066",
+    "background": "#FFFFFF",
+    "backgroundText": "#0D0D0D",
+    "outline": "#6600CC",
+    "surfaceContainer": "#F5F0F5",
+    "surfaceContainerHigh": "#EBE0EB",
+    "error": "#B30040",
+    "warning": "#B3B300",
+    "info": "#00B359"
+  }
+}

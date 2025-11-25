@@ -70,7 +70,7 @@
 
   users.users.w1dget = {
     isNormalUser = true;
-    extraGroups = [ "wheel" ];
+    extraGroups = [ "wheel" "docker" ];
   };
   users.defaultUserShell = pkgs.zsh;
 

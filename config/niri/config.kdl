@@ -162,7 +162,7 @@ binds {
     Mod+B hotkey-overlay-title="Run a Browser: Helium" { spawn "helium"; }
 //    Mod+Space hotkey-overlay-title="Run an application: fuzzel" { spawn "fuzzel"; }
     Mod+Space hotkey-overlay-title="Application Launcher" {
-        spawn "dms" "ipc" "call" "spotlight" "toggle";
+        spawn "fuzzel";
     }
     // Use spawn-sh to run a shell command. Do this if you need pipes, multiple commands, etc.
     // Note: the entire command goes as a single argument. It's passed verbatim to `sh -c`.

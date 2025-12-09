@@ -7,8 +7,8 @@
 #font-family = JetBrainsMono Nerd Font
 font-family = CaskaydiaMono Nerd Font
 font-size = 15
-window-padding-x = 10
-window-padding-y = 10
+window-padding-x = 30
+window-padding-y = 30
 
 background-opacity = 1
 

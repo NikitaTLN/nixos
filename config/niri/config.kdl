@@ -108,7 +108,7 @@ binds {
     Mod+Return hotkey-overlay-title="Open a Terminal: ghostty" { spawn "ghostty"; }
     Mod+B hotkey-overlay-title="Run a Browser: Helium" { spawn "helium"; }
     Mod+Space hotkey-overlay-title="Application Launcher" {
-        spawn "~/.config/rofi/launcher/type-1/launcher.sh";
+        spawn "~/.config/rofi/launchers/type-1/launcher.sh";
     }
     Mod+E hotkey-overlay-title="Run a FileManager: Nautilus" { spawn "nautilus"; }
     XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1+"; }

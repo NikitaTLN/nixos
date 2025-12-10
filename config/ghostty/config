@@ -1,9 +1,3 @@
-# Ghostty can reload the configuration while running by using the menu
-# options or the bound key (default: Command + Shift + comma on macOS and
-# Control + Shift + comma on other platforms). Not all config options can be
-# reloaded while running; some only apply to new windows and others may require
-# a full restart to take effect.
-
 #font-family = JetBrainsMono Nerd Font
 font-family = CaskaydiaMono Nerd Font
 font-size = 15
@@ -12,13 +6,9 @@ window-padding-y = 30
 
 background-opacity = 1
 
-#theme=TokyoNight Storm
-theme=Everforest Dark Hard
+config-file = ?"./colors.conf"
 
 confirm-close-surface = false
 cursor-style = bar
 custom-shader = shaders/cursor_smear.glsl
-#custom-shader = shaders/cursor_blaze_tapered.glsl
-#custom-shader = shaders/cursor_blaze_no_trail.glsl
-#custom-shader = shaders/cursor_blaze.glsl
 cursor-style-blink = false

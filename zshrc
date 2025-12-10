@@ -74,7 +74,7 @@ zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 
 alias vim='nvim'
 alias v="nvim -c 'Telescope find_files'"
-alias ls='eza -la -1 --color=always --icons=always'
+alias ls='eza -la --color=always --icons=always'
 alias et='eza -a -1 --color=always --icons=always -T'
 alias build="sudo nixos-rebuild --flake ~/nixos#nixos-btw --impure switch"
 alias neofetch="~/.local/share/brrtfetch ~/.config/fastfetch/defaults/pedro.gif"

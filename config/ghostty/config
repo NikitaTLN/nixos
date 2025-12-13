@@ -12,3 +12,4 @@ confirm-close-surface = false
 cursor-style = bar
 custom-shader = shaders/cursor_smear.glsl
 cursor-style-blink = false
+theme = noctalia

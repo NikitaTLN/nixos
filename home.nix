@@ -1,4 +1,4 @@
-{ config, pkgs, system, inputs, quickshell, darkMaterialShell, ... }:
+{ config, pkgs, system, inputs, quickshell, ... }:
 let
   dotfiles = "${config.home.homeDirectory}/nixos/config";
   create_symlink = path: config.lib.file.mkOutOfStoreSymlink path;
@@ -27,8 +27,9 @@ in
 {
   imports = [
     inputs.zen-browser.homeModules.beta
-    inputs.dankMaterialShell.homeModules.dankMaterialShell.default
+#    inputs.dankMaterialShell.homeModules.dankMaterialShell.default
     inputs.nixcord.homeModules.nixcord
+    inputs.noctalia.homeModules.default
   ];
 
 
@@ -46,6 +47,9 @@ in
     };
   };
 
+  programs.noctalia-shell = {
+      enable = true;
+  };
 
   services.walker.enable = true;
   programs.zen-browser.enable = true;

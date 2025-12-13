@@ -82,7 +82,7 @@ screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 
 cursor {
     xcursor-theme "MacOS-TahoeX-Cursor"
-    xcursor-size 12
+    xcursor-size 36
 }
 
 window-rule {

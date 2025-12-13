@@ -107,6 +107,7 @@
     prismlauncher
     nitch
     ghostty
+    stylua
     fuzzel
     fd
     xwayland-satellite

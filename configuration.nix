@@ -39,15 +39,15 @@
           comment: Boot into Windows
           /Arch Linux (linux-zen)
           protocol: linux
-          path: boot():/vmlinuz-linux-zen
+          path: boot():../vmlinuz-linux-zen
           cmdline: root=PARTUUID=b7e7d29e-0938-4842-a54c-d9f5f58f1b89 zswap.enabled=0 rw rootfstype=btrfs
-          module_path: boot():/initramfs-linux-zen.img
+          module_path: boot():../initramfs-linux-zen.img
           comment: Boot into Arch Rice (zen kernel)
           /Arch Linux (linux)
             protocol: linux
-            path: boot():/vmlinuz-linux
+            path: boot():../vmlinuz-linux
             cmdline: root=PARTUUID=b7e7d29e-0938-4842-a54c-d9f5f58f1b89 zswap.enabled=0 rw rootfstype=btrfs
-            module_path: boot():/initramfs-linux.img
+            module_path: boot():../initramfs-linux.img
             comment: Boot into Arch Rice
       '';
     };

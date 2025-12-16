@@ -37,6 +37,10 @@
           protocol: efi
           path: boot():/EFI/Microsoft/Boot/bootmgfw.efi
           comment: Boot into Windows
+          /ArchLinux
+          protocol: efi
+          path: boot():/EFI/arch-limine/BOOTX64.EFI
+          comment: Boot into Arch Rice
       '';
     };
   };

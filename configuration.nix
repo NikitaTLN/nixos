@@ -69,7 +69,7 @@
   hardware.bluetooth.enable = true;
 
   services.displayManager.sddm.enable = true;
-  services.displayManager.sddm.theme.current = "vitreous";
+  services.displayManager.sddm.theme = "vitreous";
   services.displayManager.sddm.settings = {
       General = {
           GreeterEnvironment = "QML_XHR_ALLOW_FILE_READ=1";

@@ -68,7 +68,7 @@
   virtualisation.docker.enable = true;
   hardware.bluetooth.enable = true;
 
-  services.displayManager.ly.enable = true;
+  services.displayManager.sddm.enable = true;
 
   services.pipewire = {
     enable = true;

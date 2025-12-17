@@ -98,6 +98,7 @@
     enable32Bit = true;
   };
   hardware.mwProCapture.enable = true;
+  programs.vscodium.enable = true;
   services.flatpak.enable = true;
   programs.firefox.enable = true;
   programs.zsh.enable = true;

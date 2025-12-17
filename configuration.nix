@@ -70,6 +70,7 @@
 
   services.displayManager.sddm.enable = true;
   services.displayManager.sddm.theme = "vitreous";
+  services.displayManager.sddm.extraPackages = with pkgs; [ kdePackages.qtmultimedia ];
   services.displayManager.sddm.settings = {
       General = {
           GreeterEnvironment = "QML_XHR_ALLOW_FILE_READ=1";

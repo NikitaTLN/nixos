@@ -143,6 +143,7 @@
     vim
     wget
     git
+    kdePackages.qtmultimedia
     curl
     typioca
     prismlauncher

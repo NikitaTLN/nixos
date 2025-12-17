@@ -74,6 +74,9 @@
       General = {
           GreeterEnvironment = "QML_XHR_ALLOW_FILE_READ=1";
       };
+      Theme = {
+          ThemeDir = "/usr/share/sddm/themes/";
+      };
   };
 
   systemd.user.services."sddm-weather" = {

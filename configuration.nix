@@ -85,6 +85,7 @@
       description = "Update weather string for SDDM";
       serviceConfig = {
         Type = "oneshot";
+        EnvironmentFile = "/home/w1dget/.config/systemd/user/env.env";
         ExecStart = ''/usr/local/bin/update-sddm-weather'';
       };
   };

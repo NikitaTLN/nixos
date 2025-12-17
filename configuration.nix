@@ -69,6 +69,32 @@
   hardware.bluetooth.enable = true;
 
   services.displayManager.sddm.enable = true;
+  services.displayManager.sddm.theme.current = "vitreous";
+  services.displayManager.sddm.settings = {
+      General = {
+          GreeterEnvironment = "QML_XHR_ALLOW_FILE_READ=1";
+      };
+  };
+
+  systemd.user.services."sddm-weather" = {
+      enable = true;
+      description = "Update weather string for SDDM";
+      serviceConfig = {
+        Type = "oneshot";
+        ExecStart = ''/usr/local/bin/update-sddm-weather'';
+      };
+  };
+  systemd.user.timers."sddm-weather" = {
+      enable = true;
+      wantedBy = [ "timers.target" ];
+      description = "Refresh SDDM weather every 10 minutes";
+      timerConfig = {
+          OnBootSec = "20s";
+          OnUnitActiveSec = "10min";
+          AccuracySec="30s";
+          Persistent="true";
+      };
+  };
 
   services.pipewire = {
     enable = true;

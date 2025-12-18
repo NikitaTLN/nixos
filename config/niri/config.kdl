@@ -81,8 +81,8 @@ environment {
 screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 
 cursor {
-    xcursor-theme "MacOS-TahoeX-Cursor"
-    xcursor-size 36
+    xcursor-theme "Bibata-Modern-Ice"
+    xcursor-size 24
 }
 
 window-rule {

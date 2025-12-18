@@ -145,6 +145,7 @@
     docker-compose
     pnpm
     vim
+    dipc
     wget
     git
     kdePackages.qtmultimedia

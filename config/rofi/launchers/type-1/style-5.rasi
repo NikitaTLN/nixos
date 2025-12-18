@@ -17,6 +17,10 @@ configuration {
     display-window:             "";
 	drun-display-format:        "{name}";
 	window-format:              "{w} · {c} · {t}";
+    kb-accept-entry:            "Return";
+    kb-remove-to-eol:           "";
+    kb-row-down:                "Control+j,Down";
+    kb-row-up:                  "Control+k,Up";
 }
 
 /*****----- Global Properties -----*****/

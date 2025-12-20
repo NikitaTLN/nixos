@@ -1,0 +1,108 @@
+@define-color bg    #1a1b26; 
+@define-color fg    #a9b1d6; 
+@define-color blk   #32344a; 
+@define-color red   #f7768e; 
+@define-color grn   #9ece6a; 
+@define-color ylw   #e0af68; 
+@define-color blu   #7aa2f7; 
+@define-color mag   #ad8ee6; 
+@define-color cyn   #0db9d7; 
+@define-color brblk #444b6a; 
+@define-color white #ffffff; 
+@define-color pink  #D295BF;
+
+* {
+    font-family: "CaskaydiaMono Nerd Font Mono";
+    font-size: 16px;
+}
+
+window#waybar {
+    background-color: @bg;
+    color: @fg;
+}
+
+#workspaces button {
+    padding: 0 6px;
+    color: @blu;
+    background: transparent;
+    border-bottom: 3px solid @bg;
+}
+#workspaces button.active {
+    color: @ylw;
+}
+#workspaces button.empty {
+    color: @white;
+}
+#workspaces button.empty.active {
+    color: @ylw;
+}
+
+#workspaces button.urgent {
+    background-color: @red;
+}
+
+button:hover {
+    background: inherit;
+}
+
+#pulseaudio
+#clock,
+#custom-sep,
+#battery,
+#cpu,
+#memory,
+#disk,
+#network,
+#language,
+#custom-uptime,
+#tray {
+    padding: 0 8px;
+    color: @white;
+}
+
+#custom-uptime {
+    color: @pink;
+    border-bottom: 3px solid @ping;
+}
+
+#language {
+    color: @ylw;
+    border-bottom: 3px solid @ylw;
+}
+
+#custom-sep {
+    color: @brblk;
+}
+
+#clock {
+    color: @cyn;
+    border-bottom: 3px solid @cyn;
+}
+
+#pulseaudio {
+    color : @red;
+    border-bottom: 3px solid @red;
+}
+
+#memory {
+    color: @mag;
+    border-bottom: 3px solid @mag;
+}
+
+#cpu {
+    color: @grn;
+    border-bottom: 3px solid @grn;
+}
+
+#network {
+    color: @blu;
+    border-bottom: 3px solid @blu;
+}
+
+#network.disconnected {
+    background-color: @red;
+}
+
+#tray {
+    background-color: @bg
+}

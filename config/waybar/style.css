@@ -1,108 +1,96 @@
-@define-color bg    #1a1b26; 
-@define-color fg    #a9b1d6; 
-@define-color blk   #32344a; 
-@define-color red   #f7768e; 
-@define-color grn   #9ece6a; 
-@define-color ylw   #e0af68; 
-@define-color blu   #7aa2f7; 
-@define-color mag   #ad8ee6; 
-@define-color cyn   #0db9d7; 
-@define-color brblk #444b6a; 
-@define-color white #ffffff; 
-@define-color pink  #D295BF;
+@import "colors.css";
 
 * {
-    font-family: "CaskaydiaMono Nerd Font Mono";
-    font-size: 16px;
+  border: none;
+  border-radius: 0px;
+  font-family: "SF Pro Display", "JetBrainsMono Nerd Font Propo";
+  font-size: 1rem;
+  min-height: 0;
+  font-weight: bold;
 }
 
 window#waybar {
-    background-color: @bg;
-    color: @fg;
+  background: transparent;
+}
+
+.modules-right {
+  margin-right: 5px;
+}
+
+tooltip {
+  background: @surface;
+  border: 1px solid @primary;
+  border-radius: 12px;
+}
+
+tooltip label {
+  color: @on_surface;
+  padding: 6px;
+}
+
+#workspaces {
+  background: @surface;
+  padding: 8px 5px;
+  border-radius: 16px;
+  color: @on_surface;
 }
 
 #workspaces button {
-    padding: 0 6px;
-    color: @blu;
-    background: transparent;
-    border-bottom: 3px solid @bg;
+  padding: 0px 6px;
+  margin: 0px 3px;
+  border-radius: 50px;
+  color: transparent;
+  background: @surface_container;
+  transition: all 0.3s ease-in-out;
 }
+
 #workspaces button.active {
-    color: @ylw;
+  background-color: @primary;
+  color: @surface;
+  min-width: 50px;
+  transition: all 0.3s ease-in-out;
+  font-size: 13px;
 }
-#workspaces button.empty {
-    color: @white;
-}
-#workspaces button.empty.active {
-    color: @ylw;
+
+#workspaces button:hover {
+  background-color: @secondary;
+  color: @surface;
+  border-radius: 16px;
+  min-width: 50px;
+  background-size: 400% 400%;
 }
 
 #workspaces button.urgent {
-    background-color: @red;
+  background-color: @error;
+  color: @surface;
+  border-radius: 16px;
+  min-width: 50px;
+  background-size: 400% 400%;
+  transition: all 0.3s ease-in-out;
 }
 
-button:hover {
-    background: inherit;
-}
-
-#pulseaudio
-#clock,
-#custom-sep,
 #battery,
-#cpu,
-#memory,
-#disk,
+#pulseaudio,
+#backlight,
+#custom-pacman,
 #network,
-#language,
-#custom-uptime,
-#tray {
-    padding: 0 8px;
-    color: @white;
+#clock,
+#custom-weather,
+#custom-media,
+#window,
+#custom-launcher,
+#custom-notification,
+#submap,
+#power-profiles-daemon,
+#tray,
+#custom-home-folder {
+  background-color: @surface;
+  padding: 0 15px 0 15px;
+  margin: 0 0 0 7px;
+  border-radius: 50px;
+  color: @primary;
 }
 
-#custom-uptime {
-    color: @pink;
-    border-bottom: 3px solid @ping;
-}
-
-#language {
-    color: @ylw;
-    border-bottom: 3px solid @ylw;
-}
-
-#custom-sep {
-    color: @brblk;
-}
-
-#clock {
-    color: @cyn;
-    border-bottom: 3px solid @cyn;
-}
-
-#pulseaudio {
-    color : @red;
-    border-bottom: 3px solid @red;
-}
-
-#memory {
-    color: @mag;
-    border-bottom: 3px solid @mag;
-}
-
-#cpu {
-    color: @grn;
-    border-bottom: 3px solid @grn;
-}
-
-#network {
-    color: @blu;
-    border-bottom: 3px solid @blu;
-}
-
-#network.disconnected {
-    background-color: @red;
-}
-
-#tray {
-    background-color: @bg
+#custom-launcher {
+  margin: 0 0 0 5px;
 }

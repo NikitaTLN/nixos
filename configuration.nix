@@ -148,6 +148,7 @@
     dipc
     wget
     git
+    lutris
     kdePackages.qtmultimedia
     curl
     typioca

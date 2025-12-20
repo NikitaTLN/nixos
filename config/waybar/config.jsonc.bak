@@ -1,0 +1,84 @@
+{
+    "layer": "top",  
+    "position": "top", 
+    "height": 30, 
+    "spacing": 4,
+    "modules-left": [
+        "custom/app",
+        "custom/sep",
+        "niriwm/workspaces",
+        "custom/sep",
+        "tray"
+    ],
+    "modules-center": [
+        "custom/uptime",
+        "custom/sep",
+        "clock",
+        "custom/sep",
+        "niri/language"
+    ],
+    "modules-right": [
+        "pulseaudio",
+        "custom/sep",
+        "cpu",
+        "custom/sep",
+        "memory",
+        "custom/sep",
+        "custom/power"
+    ],
+    "custom/app": {
+        "format": "   ❄",
+        "on-click": "~/.config/rofi/launchers/type-1/launcher.sh"
+    },
+
+    "custom/uptime": {
+        "exec": "~/.config/scripts/UptimeNixOS.sh",
+        "interval": 10
+    },
+    
+     "niriwm/workspaces": {
+         "disable-scroll": true,
+         "all-outputs": true,
+         "warp-on-scroll": false,
+         "format": "{name}",
+         "persistent-workspaces": {
+             "*": 3
+         }
+     },
+    "tray": {
+        "spacing": 10
+    },
+    "clock": {
+        "tooltip-format" : "<big>{:%Y}</big>\n<tt><small>{calendar}</small></tt>",
+        "format": "{:L%A %H:%M}",
+        "format-alt": " {:%Y-%m-%d} "
+    },
+    "cpu": {
+        "format": "{usage}% ",
+        "tooltip": false,
+        "on-click": "ghostty -e btop"
+    },
+    "memory": {
+        "format": "{used} GB"
+    },
+    "pulseaudio": {
+        "scroll-step": 5, 
+        "format": " {volume}% {icon} ",
+        "format-muted": " {format_source}",
+        "format-icons": {
+            "headphone": "",
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol"
+    },
+    "custom/power": {
+        "format" : "⏻  ",
+		"tooltip": false,
+        "on-click": "wlogout"
+    },
+    "custom/sep": {
+        "format" : "|",
+        "interval" : 0,
+        "tooltip" : false
+    }
+}

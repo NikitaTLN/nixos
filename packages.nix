@@ -59,5 +59,6 @@
     unzip
     inputs.helium.defaultPackage.${system}
 nushell
+graphite-gtk-theme
   ];
 }

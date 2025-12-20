@@ -77,6 +77,7 @@ in
     gettext
     hyprshot
     hyprlock
+    nix-search-tv
     wlogout
     meson
     hyprpaper

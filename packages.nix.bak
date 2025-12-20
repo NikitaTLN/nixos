@@ -16,6 +16,7 @@
     prismlauncher
     nitch
     ghostty
+    nushell
     stylua
     fuzzel
     fd

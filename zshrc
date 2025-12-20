@@ -79,6 +79,7 @@ alias ls='eza -la --color=always --icons=always'
 alias et='eza -a -1 --color=always --icons=always -T'
 alias build="sudo nixos-rebuild --flake ~/nixos#nixos-btw --impure switch"
 alias neofetch="~/.local/share/brrtfetch ~/.config/fastfetch/defaults/pedro.gif"
+alias i='~/nixos/config/scripts/nixos-install.sh '
 
 # Shell integrations
 eval "$(fzf --zsh)"

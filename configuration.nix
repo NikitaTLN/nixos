@@ -150,6 +150,7 @@
     git
     lutris
     kdePackages.qtmultimedia
+    winetricks
     curl
     typioca
     prismlauncher

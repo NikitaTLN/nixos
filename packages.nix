@@ -58,7 +58,6 @@
     msbuild
     unzip
     inputs.helium.defaultPackage.${system}
-nixpkgs/ nushell
-nixpkgs/ nushell
+nushell
   ];
 }

@@ -61,5 +61,6 @@
 nushell
 graphite-gtk-theme
 tokyonight-gtk-theme
+bluetui
   ];
 }

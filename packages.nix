@@ -63,5 +63,6 @@ graphite-gtk-theme
 tokyonight-gtk-theme
 bluetui
 kdePackages.dolphin
+foot
   ];
 }

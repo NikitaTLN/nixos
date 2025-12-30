@@ -33,7 +33,7 @@
   },
 
   "custom/weather": {
-    "exec": "${HOME}/.config/waybar/scripts/get-weather.sh Bangalore+India",
+    "exec": "notify-send --icon=/home/w1dget/nixos/icons/Tela/symbolic/status/weather-snow-rain-symbolic.svg --app-name=Weather $(curl \"wttr.in/Marbella?format=\"%t+%c\"\")",
     "return-type": "json",
     "format": "{}",
     "tooltip": true,
@@ -85,7 +85,7 @@
     "format": "󰅢  {}",
     "interval": "once",
     "exec": "checkupdates | wc -l",
-    "on-click": "kitty --hold yay -Syu",
+    "on-click": "ghostty --hold yay -Syu",
     "signal": 8,
     "tooltip-format": "{} updates available"
   },
@@ -125,7 +125,7 @@
   },
 
   "network": {
-    "interface": "wlan0",
+    "interface": "wlp0s20f0u6",
     "format": "{ifname}",
     "format-wifi": "{icon}  {essid}",
     "format-ethernet": "󰈀  {ipaddr}/{cidr}",

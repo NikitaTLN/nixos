@@ -66,5 +66,6 @@ kdePackages.dolphin
 foot
 swww
 swaynotificationcenter
+blueman
   ];
 }

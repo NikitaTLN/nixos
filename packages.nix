@@ -64,5 +64,7 @@ tokyonight-gtk-theme
 bluetui
 kdePackages.dolphin
 foot
+swww
+swaynotificationcenter
   ];
 }

@@ -2,7 +2,7 @@
   "position": "top",
   "margin-top": 5,
 
-  "modules-left": ["custom/launcher", "clock", "custom/pacman", "hyprland/submap", "custom/media"],
+  "modules-left": ["custom/launcher", "clock", "hyprland/submap", "custom/media"],
   "modules-center": [
     "hyprland/workspaces"
   ],
@@ -63,7 +63,7 @@
   },
 
   "custom/launcher": {
-    "format": "",
+    "format": "❄ ",
     "on-click": "swaync-client -t",
     "tooltip-format": "Launch your favorite apps"
   },

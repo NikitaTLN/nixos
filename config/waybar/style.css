@@ -4,7 +4,7 @@
   border: none;
   border-radius: 0px;
   font-family: "SF Pro Display", "JetBrainsMono Nerd Font Propo";
-  font-size: 1rem;
+  font-size: 12px; 
   min-height: 0;
   font-weight: bold;
 }
@@ -92,5 +92,5 @@ tooltip label {
 }
 
 #custom-launcher {
-  margin: 0 0 0 5px;
+  margin: 0 0 0 4px;
 }

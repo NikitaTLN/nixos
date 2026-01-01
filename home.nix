@@ -13,6 +13,7 @@ let
     rofi = "rofi";
     waybar = "waybar";
     wlogout = "wlogout";
+    kitty = "kitty";
     mako = "mako";
     walls = "walls";
     scripts = "scripts";
@@ -21,6 +22,7 @@ let
     eww = "eww";
     niri = "niri";
     fuzzel = "fuzzel";
+    swaync = "swaync";
     DankMaterialShell = "DankMaterialShell";
   };
 in

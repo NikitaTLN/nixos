@@ -67,5 +67,6 @@ foot
 swww
 swaynotificationcenter
 blueman
+kitty
   ];
 }

@@ -69,5 +69,6 @@ swaynotificationcenter
 blueman
 kitty
 glib
+yazi
   ];
 }

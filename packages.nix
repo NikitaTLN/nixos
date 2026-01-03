@@ -68,5 +68,6 @@ swww
 swaynotificationcenter
 blueman
 kitty
+glib
   ];
 }

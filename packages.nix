@@ -71,5 +71,6 @@ kitty
 glib
 yazi
 killall
+everforest-gtk-theme
   ];
 }

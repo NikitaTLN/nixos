@@ -70,5 +70,6 @@ blueman
 kitty
 glib
 yazi
+killall
   ];
 }

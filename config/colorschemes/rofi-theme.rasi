@@ -1,0 +1,5 @@
+@import "~/nixos/config/rofi/launchers/type-1/style-5.rasi"
+
+entry {
+  placeholder: "Search themes...";
+}

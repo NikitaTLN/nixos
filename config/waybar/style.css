@@ -1,4 +1,4 @@
-@import "colors.css";
+@import "colors/colors.css";
 
 * {
   border: none;
@@ -68,9 +68,29 @@ tooltip label {
   background-size: 400% 400%;
   transition: all 0.3s ease-in-out;
 }
+#clock {
+    font-size: 13px
+}
+#custom-notification {
+    font-size: 15px
+}
+#pulseaudio {
+    font-size: 13px
+}
+#network {
+    font-size: 14px
+}
+#language {
+    font-size: 15px
+}
+#custom-wlogout {
+    font-size: 15px
+}
 
 #battery,
+#custom-wlogout,
 #pulseaudio,
+#language,
 #backlight,
 #custom-pacman,
 #network,

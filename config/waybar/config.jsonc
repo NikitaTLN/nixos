@@ -2,11 +2,11 @@
   "position": "top",
   "margin-top": 5,
 
-  "modules-left": ["custom/launcher", "clock", "hyprland/submap", "custom/media"],
+  "modules-left": ["custom/wlogout", "clock", "hyprland/submap", "custom/media", "hyprland/language"],
   "modules-center": [
     "hyprland/workspaces"
   ],
-  "modules-right": ["pulseaudio", "network", "tray"],
+  "modules-right": ["pulseaudio", "network", "tray", "custom/notification"],
 
   "hyprland/submap": {
     "format": "{}",
@@ -63,9 +63,19 @@
   },
 
   "custom/launcher": {
-    "format": "❄ ",
+    "format": " ❄ ",
     "on-click": "swaync-client -t",
     "tooltip-format": "Launch your favorite apps"
+  },
+
+  "custom/wlogout": {
+    "format": " ⏻ ",
+    "on-click": "wlogout",
+    "tooltip-format": "Launch your logout menu"
+  },
+
+  "hyprland/language": {
+      "format": "{short}"
   },
 
   "custom/media": {

@@ -10,6 +10,7 @@
   nixpkgs.config.allowUnfree = true;
 
   services.tailscale.enable = true;
+  services.ratbagd.enable = true;
   i18n.defaultLocale = "ru_RU.UTF-8";
 
 

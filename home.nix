@@ -17,6 +17,7 @@ let
     mako = "mako";
     walls = "walls";
     scripts = "scripts";
+    colorschemes = "colorschemes";
     walker = "walker";
     hyprshell = "hyprshell";
     eww = "eww";

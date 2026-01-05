@@ -1,63 +1,35 @@
+@import 'styles/buttons.css';
+@import 'styles/colors.css';
+
 window {
-    font-size: 24pt;
-    color: @foreground; /* text */
-    background-color: rgba(30, 30, 46, 0.8);
-}
+    font-family: "SF Pro", "CaskaydiaMono Nerd Font Propo";
+    font-size: 1.2em;
+    color:  @on_surface; /* text */
+    background-color: alpha(@surface, 0.85);
+} 
 
 button {
     background-repeat: no-repeat;
     background-position: center;
     background-size: 20%;
-    background-color: rgba(200, 220, 255, 0);
-    animation: gradient_f 10s ease-in infinite;
-    transition: all 0.3s cubic-bezier(.55, 0.0, .28, 1.682), box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out;
-    border-radius: 80px;
-	border:0px;
-	outline-style: none;
+    background-color: transparent;
+    animation: gradient_f 20s ease-in infinite;
+    transition: all 0.3s cubic-bezier(0.15,0,0.1,1);
+    box-shadow: 0 0 10px 2px transparent;
+    border-radius: 36px;
+    margin: 10px;
 }
 
 button:focus {
+    box-shadow: none;
+    outline-style: none;
     background-size: 20%;
-	border: 0px;
-	outline-style: none;
 }
 
 button:hover {
-    background-color: transparent; 
-    color: @color13;
-    background-size: 20%;
-    border-radius: 80px;
+    background-size: 50%;
     outline-style: none;
+    box-shadow: 0 0 10px 3px rgba(0,0,0,.4);
+    background-color: @primary;
+    color: transparent;
 }
-
-/* Adjust the size of the icon or content inside the button */
-button span {
-    font-size: 1.2em; /* Increase the font size */
-}
-
-
-#lock {
-    background-image: image(url("./icons/lock.svg"));
-}
-
-#logout {
-    background-image: image(url("./icons/logout.svg"));
-}
-
-#reboot-to-bios {
-    background-image: image(url("./icons/suspend.svg"));
-}
-
-#hibernate {
-    background-image: image(url("./icons/hibernate.svg"));
-}
-
-#shutdown {
-    background-image: image(url("./icons/shutdown.svg"));
-}
-
-#reboot {
-    background-image: image(url("./icons/reboot.svg"));
-}
-
-

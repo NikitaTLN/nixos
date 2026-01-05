@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-# NixOS package installer with fuzzy search (nix-search-tv + fzf)
-# Flake-based, git-managed, matches your exact indentation style
+# NixOS multi-package installer using fzf --multi (no preview)
+# Select multiple packages quickly, then commit & rebuild once.
 
 PACKAGES_FILE="/home/w1dget/nixos/packages.nix"
 CONFIG_DIR="$(dirname "$PACKAGES_FILE")"
@@ -14,64 +14,87 @@ for cmd in nix-search-tv fzf git; do
   fi
 done
 
-echo "Launching fuzzy package search (nix-search-tv + fzf)..."
-echo "Start typing to filter, ↑/↓ to navigate, Enter to select, Esc to cancel."
+echo "NixOS Package Installer – Multi-select mode (no preview)"
+echo "→ Type to search, Tab or Ctrl+Space to select multiple"
+echo "→ Press Enter when done (Esc to cancel)"
 echo
 
-# Fuzzy search with nice preview window
-selected_line=$(nix-search-tv print nixpkgs | fzf)
+# fzf multi-select WITHOUT preview window
+selected_lines=$(nix-search-tv print nixpkgs | fzf --multi)
 
-[ -z "$selected_line" ] && echo "No package selected. Exiting." && exit 0
-
-# Extract raw attribute name
-selected_raw=$(echo "$selected_line" | awk -F ' │ ' '{print $1}')
-
-# Remove nixpkgs. or nixpkgs/ prefix if present
-selected=$(echo "$selected_raw" | sed -E 's/^nixpkgs[./]?//')
-
-[ -z "$selected" ] && selected="$selected_raw"
-
-echo "Selected package: $selected"
-
-# Duplicate check (4-space indented lines)
-if grep -q "^    $selected$" "$PACKAGES_FILE"; then
-  echo "'$selected' is already in the list."
+# User cancelled or nothing selected
+if [ -z "$selected_lines" ]; then
+  echo "No packages selected. Exiting."
   exit 0
 fi
 
-# Find the closing ]; line (any indentation, take the last one just in case)
-line_num=$(grep -n '^\s*];$' "$PACKAGES_FILE" | tail -1 | cut -d: -f1)
+# Process selections
+mapfile -t lines <<< "$selected_lines"
+added_packages=()
 
+# Find closing ]; line once
+line_num=$(grep -n '^\s*];$' "$PACKAGES_FILE" | tail -1 | cut -d: -f1)
 if [ -z "$line_num" ]; then
   echo "Error: Could not find the closing '];' line in $PACKAGES_FILE"
   exit 1
 fi
 
-# Insert new package with exactly 4-space indentation
-sed -i "${line_num}i     $selected" "$PACKAGES_FILE"
+for line in "${lines[@]}"; do
+  selected_raw=$(echo "$line" | awk -F ' │ ' '{print $1}')
+  selected=$(echo "$selected_raw" | sed -E 's/^nixpkgs[./]?//')
+  [ -z "$selected" ] && selected="$selected_raw"
 
-echo "Added '$selected' to $PACKAGES_FILE"
+  # Skip duplicates
+  if grep -q "^    $selected$" "$PACKAGES_FILE"; then
+    echo "→ Skipping '$selected' (already present)"
+    continue
+  fi
 
-# Git operations
+  # Insert with 4-space indent
+  sed -i "${line_num}i     $selected" "$PACKAGES_FILE"
+
+  # Adjust insertion point for next package
+  ((line_num++))
+
+  added_packages+=("$selected")
+  echo "→ Added '$selected'"
+done
+
+# Nothing new added?
+if [ ${#added_packages[@]} -eq 0 ]; then
+  echo "No new packages added."
+  exit 0
+fi
+
+echo
+echo "Added packages: ${added_packages[*]}"
+
+# Git
 echo
 echo "Committing changes..."
 cd "$CONFIG_DIR" || exit 1
 git add "$PACKAGES_FILE"
-git commit -m "hewo"
+
+if [ ${#added_packages[@]} -eq 1 ]; then
+  git commit -m "hewo: add ${added_packages[0]}"
+else
+  git commit -m "hewo: add ${added_packages[*]}"
+fi
 
 echo "Pushing..."
-git push || echo "Push failed — continuing anyway"
+git push || echo "Push failed — continuing with rebuild"
 
-# Rebuild with your flake
+# Rebuild
 echo
 echo "Rebuilding NixOS (flake)..."
 sudo nixos-rebuild --flake ~/nixos#nixos-btw --impure switch
 
 if [ $? -eq 0 ]; then
   echo
-  echo "Success! '$selected' added, committed, pushed, and installed."
+  echo "Success! Installed: ${added_packages[*]}"
 else
   echo
   echo "Rebuild failed — check errors above."
+  echo "Git changes are still committed and pushed."
   exit 1
 fi

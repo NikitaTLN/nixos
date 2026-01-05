@@ -77,11 +77,11 @@
         },
         {
           "label": "❄ ",
-          "command": "~/.config/rofi/launchers/type-1/launcher.sh"
+          "command": "~/nixos/config/rofi/launchers/type-1/launcher.sh"
         },
         {
-          "label": " ",
-          "command": "nm-connection-editor"
+          "label": "󰌁 ",
+          "command": "hyprpicker --autocopy"
         },
         {
           "label": "󰂯",

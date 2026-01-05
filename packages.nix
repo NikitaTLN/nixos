@@ -101,5 +101,6 @@ nightfox-gtk-theme
 numix-sx-gtk-theme
 andromeda-gtk-theme
 tokyonight-gtk-theme
+piper
   ];
 }

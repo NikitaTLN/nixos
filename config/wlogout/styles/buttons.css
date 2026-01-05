@@ -37,3 +37,10 @@
 #reboot:hover {
     background-image: image(url("../icons/restart-hover.png"));
 }
+#reboot-into-bios {
+    background-image: image(url("../icons/restart.png"));
+}
+
+#reboot-into-bios:hover {
+    background-image: image(url("../icons/restart-hover.png"));
+}

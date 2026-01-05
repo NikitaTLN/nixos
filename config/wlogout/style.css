@@ -15,9 +15,9 @@ button {
     background-color: transparent;
     animation: gradient_f 20s ease-in infinite;
     transition: all 0.3s cubic-bezier(0.15,0,0.1,1);
-    box-shadow: 0 0 10px 2px transparent;
-    border-radius: 36px;
-    margin: 10px;
+    box-shadow: 0 0 2px 1px transparent;
+    border-radius: 20px;
+    margin: 3px;
 }
 
 button:focus {
@@ -27,7 +27,7 @@ button:focus {
 }
 
 button:hover {
-    background-size: 50%;
+    background-size: 40%;
     outline-style: none;
     box-shadow: 0 0 10px 3px rgba(0,0,0,.4);
     background-color: @primary;

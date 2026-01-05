@@ -53,6 +53,7 @@
     cliphist
     wl-clipboard-rs
     dotnet-sdk_9
+    discord
     dotnet-runtime_9
     mono
     msbuild

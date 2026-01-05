@@ -60,7 +60,7 @@
 
   time.timeZone = "Europe/Madrid";
   services.openssh.enable = true;
-  programs.niri.enable = true;
+#  programs.niri.enable = true;
 
 # bash prompt: PROMPT_COMMAND='PS1_CMD1=$(git branch --show-current 2>/dev/null)'; PS1='\[\e[38;5;45m\]\w\[\e[0m\] \[\e[38;5;196m\]${PS1_CMD1}\n\[\e[38;5;48m\]❯\[\e[0m\] '
 

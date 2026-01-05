@@ -7,39 +7,15 @@
             url = "github:nix-community/home-manager";
             inputs.nixpkgs.follows = "nixpkgs";
         };
-        zen-browser = {
-            url = "github:0xc000022070/zen-browser-flake";
-            inputs.nixpkgs.follows = "nixpkgs";
-        };
-        hyprlauncher = {
-            url = "github:hyprwm/hyprlauncher";
-            inputs.nixpkgs.follows = "nixpkgs";
-        };
-#        dgop = {
-#            url = "github:AvengeMedia/dgop";
-#            inputs.nixpkgs.follows = "nixpkgs";
-#        };
-#        dankMaterialShell = {
-#            url = "github:AvengeMedia/DankMaterialShell";
-#            inputs.nixpkgs.follows = "nixpkgs";
-#            inputs.dgop.follows = "dgop";
-#        };
-        nixcord = {
-            url = "github:kaylorben/nixcord";
-        };
         helium = {
             url = "github:FKouhai/helium2nix/main";
         };
         sfpro = {
             url = "github:Lyndeno/apple-fonts.nix";
         };
-        noctalia = {
-            url = "github:noctalia-dev/noctalia-shell";
-            inputs.nixpkgs.follows = "nixpkgs";
-        };
     };
 
-    outputs = { self, nixpkgs, home-manager, sfpro, helium, zen-browser, hyprlauncher, nixcord, noctalia, ... } @ inputs: {
+    outputs = { self, nixpkgs, home-manager, sfpro, helium, ... } @ inputs: {
         nixosConfigurations.nixos-btw = nixpkgs.lib.nixosSystem {
             system = "x86_64-linux";
             specialArgs = { inherit inputs; };

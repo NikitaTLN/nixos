@@ -29,36 +29,8 @@ let
 in
 {
   imports = [
-    inputs.zen-browser.homeModules.beta
-#    inputs.dankMaterialShell.homeModules.dankMaterialShell.default
-    inputs.nixcord.homeModules.nixcord
-    inputs.noctalia.homeModules.default
   ];
 
-
-  programs.nixcord = {
-    enable = true;  
-    vesktop = {
-        enable = true;
-        useSystemVencord = false;
-    };
-    dorion.enable = true;
-    config = {
-        plugins = {
-            fakeNitro.enable = true;
-        };
-    };
-  };
-
-  programs.noctalia-shell = {
-      enable = true;
-  };
-
-  services.walker.enable = true;
-  programs.zen-browser.enable = true;
-#  programs.dankMaterialShell = {
-#    enable = true;
-#  };
   home.username = "w1dget";
   home.homeDirectory = "/home/w1dget";
   home.stateVersion = "25.05";

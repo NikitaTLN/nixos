@@ -69,7 +69,6 @@ in
     obsidian
     localsend
     libnotify
-    inputs.hyprlauncher.packages.${pkgs.system}.default
     (pkgs.writeShellApplication {
       name = "ns";
       runtimeInputs = with pkgs; [

@@ -31,6 +31,19 @@ in
   imports = [
   ];
 
+  programs.nixcord = {
+    enable = true;  
+    vesktop = {
+        enable = true;
+        useSystemVencord = false;
+    };
+    dorion.enable = true;
+    config = {
+        plugins = {
+            fakeNitro.enable = true;
+        };
+    };
+  };
   home.username = "w1dget";
   home.homeDirectory = "/home/w1dget";
   home.stateVersion = "25.05";

@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=Monochrome GTK
+Comment= Monochrome GTKversion
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=Monochrome GTK-GTK
+MetacityTheme=Neon-Shi-GTK
+IconTheme= RR Circle Icon Pack 
+CursorTheme=Adwaita
+ButtonLayout=:minimize,maximize,close

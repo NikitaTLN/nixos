@@ -12,7 +12,6 @@
   services.tailscale.enable = true;
   services.ratbagd.enable = true;
   i18n.defaultLocale = "ru_RU.UTF-8";
-  programs.vesktop.enable = true;
 
 
   boot.loader = {

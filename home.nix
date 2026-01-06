@@ -29,6 +29,7 @@ let
 in
 {
   imports = [
+    inputs.nixcord.homeModules.nixcord
   ];
 
   programs.nixcord = {

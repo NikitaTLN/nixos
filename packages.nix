@@ -70,7 +70,6 @@ glib
 yazi
 killall
 everforest-gtk-theme
-rose-pine-gtk-theme
 gruvbox-gtk-theme
 kanagawa-gtk-theme
 nightfox-gtk-theme

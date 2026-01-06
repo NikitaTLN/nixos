@@ -13,12 +13,9 @@
         sfpro = {
             url = "github:Lyndeno/apple-fonts.nix";
         };
-        nixcord = {
-            url = "github:kaylorben/nixcord";
-        };
     };
 
-    outputs = { self, nixpkgs, home-manager, nixcord, sfpro, helium, ... } @ inputs: {
+    outputs = { self, nixpkgs, home-manager, sfpro, helium, ... } @ inputs: {
         nixosConfigurations.nixos-btw = nixpkgs.lib.nixosSystem {
             system = "x86_64-linux";
             specialArgs = { inherit inputs; };

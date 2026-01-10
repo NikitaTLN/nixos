@@ -73,6 +73,7 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 
 alias vim='nvim'
+alias sub='~/clones/SubTUI/SubTUI'
 alias code='codium --ozone-platform=wayland'
 alias v="nvim -c 'Telescope find_files'"
 alias ls='eza -la --color=always --icons=always'

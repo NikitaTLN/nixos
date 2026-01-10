@@ -76,5 +76,6 @@ nightfox-gtk-theme
 tokyonight-gtk-theme
 piper
 gsettings-desktop-schemas
+gnumake
   ];
 }

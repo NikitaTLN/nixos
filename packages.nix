@@ -78,5 +78,6 @@ piper
 gsettings-desktop-schemas
 gnumake
 mpv
+bootdev-cli
   ];
 }

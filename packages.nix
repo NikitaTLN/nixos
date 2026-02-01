@@ -80,5 +80,6 @@ gnumake
 mpv
 bootdev-cli
 pamixer
+rubik
   ];
 }

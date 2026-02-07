@@ -12,6 +12,7 @@ let
     ghostty = "ghostty";
     wofi = "wofi";
     rofi = "rofi";
+    tmux-sessionizer = "tmux-sessionizer";
     waybar = "waybar";
     wlogout = "wlogout";
     kitty = "kitty";

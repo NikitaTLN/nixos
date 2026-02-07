@@ -133,7 +133,8 @@ echo ""
 
 # NvChad theme
 echo -e "${CYAN}-> Applying Neovim theme...${NC}"
-cp "$THEME_DIR/nvim/lua/colors.lua" "$HOME/nixos/config/nvim/lua/plugins/colors.lua" > /dev/null 2>&1
+cp "$THEME_DIR/nvim/lua/colors.lua" "$HOME/nixos/config/nvim/lua/
+colors.lua" > /dev/null 2>&1
 echo -e "${CYAN}-> Theme will auto-reload in Neovim (within 2 seconds)${NC}"
 echo ""
 

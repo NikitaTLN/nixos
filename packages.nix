@@ -82,5 +82,6 @@ bootdev-cli
 pamixer
 rubik
 noto-fonts-cjk-sans
+cmake
   ];
 }

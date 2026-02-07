@@ -38,7 +38,6 @@ in
   programs.home-manager.enable = true;
   home.file.".zshrc".source = ./zshrc;
   home.file.".tmux.conf".source = ./tmuxconf;
-  home.file.".tmux".source = "${config.home.homeDirectory}/nixos/tmux";
   home.file.".themes".source = "${config.home.homeDirectory}/nixos/themes";
   home.file.".icons".source = "${config.home.homeDirectory}/nixos/icons";
   home.packages = with pkgs; [

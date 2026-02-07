@@ -1,10 +1,4 @@
-local M = {
-  ,
-}
-
-function M.config()
-  local everforest = require("everforest")
-  everforest.setup({
+require("everforest").setup({
     background = "hard",
     transparent_background_level = 1,
     italics = true,
@@ -15,8 +9,4 @@ function M.config()
       hl["DiagnosticUnderlineWarn"] = { undercurl = true, sp = palette.yellow }
     end,
   })
-  everforest.load()
-end
-
-return M
-
+require("everforest").load()

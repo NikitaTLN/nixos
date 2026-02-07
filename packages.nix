@@ -22,7 +22,6 @@
     xwayland-satellite
     efibootmgr
     gh
-    neovim
     gcc
     ripgrep
     feh

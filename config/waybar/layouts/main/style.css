@@ -3,11 +3,9 @@
 * {
   border: none;
   border-radius: 0px;
-  font-family:  "Rubik","JetBrainsMono Nerd Font Propo";
-  font-size: 15px; 
+  font-family: "SF Pro Display", "JetBrainsMono Nerd Font Propo";
+  font-size: 12px; 
   min-height: 0;
-  padding: 0;
-  margin: 0;
   font-weight: bold;
 }
 
@@ -15,17 +13,14 @@ window#waybar {
   background: transparent;
 }
 
-.modules-center {
-    border-radius: 28px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-    padding: 6px 12px;
-    background: @background;
+.modules-right {
+  margin-right: 5px;
 }
 
 tooltip {
   background: @surface;
   border: 1px solid @primary;
-  border-radius: 5px;
+  border-radius: 12px;
 }
 
 tooltip label {
@@ -34,11 +29,10 @@ tooltip label {
 }
 
 #workspaces {
-  background: transparent;
-  padding: 0;
-  margin: 0 10px 0 10px;
-  box-shadow: none;
-  border: none;
+  background: @surface;
+  padding: 8px 5px;
+  border-radius: 16px;
+  color: @on_surface;
 }
 
 #workspaces button {
@@ -51,21 +45,48 @@ tooltip label {
 }
 
 #workspaces button.active {
-  background: linear-gradient(135deg, @color3 0%, @color5 50%, @color2 100%);
-  color: @background;
-  min-width: 40px;
+  background-color: @primary;
+  color: @surface;
+  min-width: 50px;
+  transition: all 0.3s ease-in-out;
   font-size: 13px;
 }
 
 #workspaces button:hover {
   background-color: @secondary;
-  color: @foreground;
+  color: @surface;
+  border-radius: 16px;
+  min-width: 50px;
+  background-size: 400% 400%;
 }
 
 #workspaces button.urgent {
   background-color: @error;
-  color: @background
+  color: @surface;
+  border-radius: 16px;
+  min-width: 50px;
+  background-size: 400% 400%;
+  transition: all 0.3s ease-in-out;
 }
+#clock {
+    font-size: 13px
+}
+#custom-notification {
+    font-size: 15px
+}
+#pulseaudio {
+    font-size: 13px
+}
+#network {
+    font-size: 14px
+}
+#language {
+    font-size: 15px
+}
+#custom-wlogout {
+    font-size: 15px
+}
+
 #battery,
 #custom-wlogout,
 #pulseaudio,

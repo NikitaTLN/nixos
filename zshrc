@@ -45,11 +45,11 @@ bindkey -s '^b' "$HOME/nixos/config/scripts/menu-tui\n"
 bindkey -s '^e' "$HOME/nixos/config/scripts/fuzzcat\n"
 
 
-#if command -v tmux >/dev/null 2>&1; then
-#  if [ -z "$TMUX" ]; then
-#    tmux attach -t workflow || tmux new -s workflow
-#  fi
-#fi
+if command -v tmux >/dev/null 2>&1; then
+  if [ -z "$TMUX" ]; then
+    tmux attach -t workflow || tmux new -s workflow
+  fi
+fi
 
 
 # History
@@ -71,6 +71,8 @@ zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 zstyle ':completion:*' menu no
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
+
+path+=('/usr/local/bin/')
 
 alias vim='nvim'
 alias sub='~/clones/SubTUI/SubTUI'

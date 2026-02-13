@@ -83,5 +83,6 @@ rubik
 noto-fonts-cjk-sans
 cmake
 nerd-fonts.caskaydia-cove
+typst
   ];
 }

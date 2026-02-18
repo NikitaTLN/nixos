@@ -85,5 +85,6 @@ cmake
 nerd-fonts.caskaydia-cove
 typst
 just
+uxplay
   ];
 }

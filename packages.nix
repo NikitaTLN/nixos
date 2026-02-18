@@ -86,5 +86,6 @@ nerd-fonts.caskaydia-cove
 typst
 just
 uxplay
+gst_all_1.gstreamer
   ];
 }

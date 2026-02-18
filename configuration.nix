@@ -13,9 +13,23 @@
   services.ratbagd.enable = true;
   i18n.defaultLocale = "ru_RU.UTF-8";
 
-  services.avahi.enable = true;  
-  services.avahi.openFirewall = true;
-  networking.firewall.enable = false;
+  networking.firewall.allowedTCPPorts = [ 7000 7001 7100 ];
+  networking.firewall.allowedUDPPorts = [ 5353 6000 6001 7011 ];
+
+  services.avahi = {
+      enable = true;
+      nssmdns = true;
+      publish = {
+          enable = true;
+          addresses = true;
+          workstation = true;
+          userServices = true;
+          domain = true;
+      };
+  };
+
+
+
 
   boot.loader = {
     grub.enable = false;

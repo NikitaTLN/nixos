@@ -13,6 +13,7 @@
   services.ratbagd.enable = true;
   i18n.defaultLocale = "ru_RU.UTF-8";
 
+  services.avahi.enable = true;  
 
   boot.loader = {
     grub.enable = false;

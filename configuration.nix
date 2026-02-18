@@ -14,6 +14,7 @@
   i18n.defaultLocale = "ru_RU.UTF-8";
 
   services.avahi.enable = true;  
+  services.avahi.openFirewall = true;
 
   boot.loader = {
     grub.enable = false;

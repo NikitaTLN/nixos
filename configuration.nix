@@ -15,6 +15,7 @@
 
   services.avahi.enable = true;  
   services.avahi.openFirewall = true;
+  networking.firewall.enable = false;
 
   boot.loader = {
     grub.enable = false;

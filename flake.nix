@@ -8,7 +8,7 @@
             inputs.nixpkgs.follows = "nixpkgs";
         };
         helium = {
-            url = "github:NikitaTLN/helium2nix/";
+            url = "github:NikitaTLN/helium2nix/main";
         };
         sfpro = {
             url = "github:Lyndeno/apple-fonts.nix";

@@ -41,15 +41,16 @@
         "nixpkgs": "nixpkgs"
       },
       "locked": {
-        "lastModified": 1770558364,
-        "narHash": "sha256-TUHEp87sL7VVuzHsEXQuTSagZDZm6SEGvji6jOn2Tgc=",
+        "lastModified": 1771449172,
+        "narHash": "sha256-RzS2hJwT29IfTcywIVJy6hrQ6ghaQbaWUSIHkU1YxpM=",
         "owner": "NikitaTLN",
         "repo": "helium2nix",
-        "rev": "5e7c7854cc92bcced23be183d6ebaaa9948eb71a",
+        "rev": "ea017320fc17db28a191b8c50a024f90de73e39a",
         "type": "github"
       },
       "original": {
         "owner": "NikitaTLN",
+        "ref": "main",
         "repo": "helium2nix",
         "type": "github"
       }

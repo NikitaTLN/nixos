@@ -43,14 +43,13 @@
       "locked": {
         "lastModified": 1770558364,
         "narHash": "sha256-TUHEp87sL7VVuzHsEXQuTSagZDZm6SEGvji6jOn2Tgc=",
-        "owner": "FKouhai",
+        "owner": "NikitaTLN",
         "repo": "helium2nix",
         "rev": "5e7c7854cc92bcced23be183d6ebaaa9948eb71a",
         "type": "github"
       },
       "original": {
-        "owner": "FKouhai",
-        "ref": "main",
+        "owner": "NikitaTLN",
         "repo": "helium2nix",
         "type": "github"
       }

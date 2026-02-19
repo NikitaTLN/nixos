@@ -75,6 +75,7 @@ zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 path+=('/usr/local/bin/')
 
 alias vim='nvim'
+alias airplay='uxplay -fps 120 -nh -n hello_mr_computer'
 alias sub='~/clones/SubTUI/SubTUI'
 alias code='codium --ozone-platform=wayland'
 alias v="nvim -c 'Telescope find_files'"

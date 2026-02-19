@@ -74,7 +74,7 @@
   networking.hostName = "nixos-btw";
   networking.networkmanager.enable = true;
 
-  time.timeZone = "Europe/Madrid";
+  time.timeZone = "Europe/Tallinn";
   services.openssh.enable = true;
 #  programs.niri.enable = true;
 

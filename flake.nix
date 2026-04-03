@@ -3,7 +3,7 @@
     
     inputs = {
         nixpkgs.url = "nixpkgs/nixos-unstable";
-        affinity-nix.url = "github:mrshmllow/affinity.nix";
+        affinity-nix.url = "github:mrshmllow/affinity-nix";
         home-manager = {
             url = "github:nix-community/home-manager";
             inputs.nixpkgs.follows = "nixpkgs";

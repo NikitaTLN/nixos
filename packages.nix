@@ -92,5 +92,6 @@ gst_all_1.gst-libav
 gst_all_1.gst-plugins-good
 avahi
 obs-studio
+python313Packages.pip
   ];
 }

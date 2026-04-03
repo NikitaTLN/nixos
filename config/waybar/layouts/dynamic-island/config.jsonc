@@ -2,11 +2,11 @@
   "position": "top",
   "margin-top": 5,
 
-  "modules-left": ["custom/wlogout", "clock", "hyprland/submap", "custom/media", "hyprland/language"],
+  "modules-left": [],
   "modules-center": [
-    "hyprland/workspaces"
+    "clock", "custom/media", "hyprland/workspaces", "pulseaudio", "network", "tray", "hyprland/language"
   ],
-  "modules-right": ["pulseaudio", "network", "tray", "custom/notification"],
+  "modules-right": [],
 
   "hyprland/submap": {
     "format": "{}",
@@ -14,16 +14,7 @@
   },
 
   "hyprland/workspaces": {
-    "format": "{icon}",
-    "format-icons": {
-      "1": "",
-      "2": "",
-      "3": "󰓓",
-      "4": "󰑊",
-      "5": "󰓇",
-      "default": "",
-      "urgent": ""
-    },
+    "format": "{name}",
     "persistent-workspaces": {
       "*": 5
     },
@@ -116,11 +107,13 @@
   },
 
   "pulseaudio": {
-    "format": "{icon}  {volume}%",
+    "format": "{icon}",
     "format-bluetooth": "󰂱 {volume}%",
     "format-muted": "󰖁",
     "scroll-step": 1,
     "on-click": "pavucontrol",
+    "on-scroll-up": "~/nixos/config/waybar/scripts/volume.sh --inc",
+    "on-scroll-down": "~/nixos/config/waybar/scripts/volume.sh --dec",
     "ignored-sinks": ["Easy Effects Sink"],
     "format-icons": {
       "headphone": "",
@@ -137,7 +130,7 @@
   "network": {
     "interface": "wlp5s0",
     "format": "{ifname}",
-    "format-wifi": "{icon}  {essid}",
+    "format-wifi": "{icon}",
     "format-ethernet": "󰈀  {ipaddr}/{cidr}",
     "format-disconnected": "󰤭  Disconnected",
     "max-length": 50,
@@ -146,7 +139,7 @@
   },
 
   "clock": {
-    "format": "󰥔  {:%I:%M %p}",
+    "format": "{:%H:%M}",
     "interval": 1,
     "tooltip-format": "<tt>{calendar}</tt>",
     "calendar": {

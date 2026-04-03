@@ -93,5 +93,6 @@ gst_all_1.gst-plugins-good
 avahi
 obs-studio
 python313Packages.pip
+python313Packages.pyqt6
   ];
 }

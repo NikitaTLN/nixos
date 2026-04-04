@@ -70,7 +70,7 @@ else
 fi
 
 if [ -n "$WALLPAPER" ] && [ -f "$WALLPAPER" ]; then
-    swww img "$WALLPAPER" --transition-type center --transition-fps 144 --transition-step 255 > /dev/null 2>&1
+    awww img "$WALLPAPER" --transition-type center --transition-fps 144 --transition-step 255 > /dev/null 2>&1
     # Also update hyprlock symlink
     ln -sf "$WALLPAPER" ~/nixos/config/hypr/hyprlock/wallpaper > /dev/null 2>&1
 else

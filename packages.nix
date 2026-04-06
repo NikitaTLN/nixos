@@ -62,7 +62,7 @@
 nushell
 tokyonight-gtk-theme
 bluetui
-swww
+awww
 swaynotificationcenter
 blueman
 kitty

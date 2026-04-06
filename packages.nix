@@ -96,5 +96,6 @@ obs-studio
 python313Packages.pip
 python313Packages.pyqt6
 python314Packages.pyqt6
+nixos/ xdg.mime.defaultApplications
   ];
 }

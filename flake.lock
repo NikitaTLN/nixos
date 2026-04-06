@@ -175,11 +175,11 @@
         "nixpkgs": "nixpkgs_4"
       },
       "locked": {
-        "lastModified": 1775471900,
-        "narHash": "sha256-FXTM6sTCeACXQMppcYDRUzDn07u32ACER92U2910deE=",
+        "lastModified": 1775472062,
+        "narHash": "sha256-JgbRlJyXb4kGc59vlWqruq6TcueA6BEWnBROy8dT9ds=",
         "owner": "NikitaTLN",
         "repo": "helium2nix",
-        "rev": "a5aa5c529e0dfa756d302862da9be8a822c49767",
+        "rev": "515443b01983a658561a7494752abc89839b1dad",
         "type": "github"
       },
       "original": {

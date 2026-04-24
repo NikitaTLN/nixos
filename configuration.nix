@@ -12,6 +12,7 @@
   services.tailscale.enable = true;
   services.ratbagd.enable = true;
   i18n.defaultLocale = "ru_RU.UTF-8";
+  services.xserver.windowManager.oxwm.enable = true;
 
 
   networking.firewall.enable = false;
@@ -110,27 +111,6 @@
       };
   };
 
-  systemd.user.services."sddm-weather" = {
-      enable = true;
-      description = "Update weather string for SDDM";
-      serviceConfig = {
-        Type = "oneshot";
-        EnvironmentFile = "/home/w1dget/.config/systemd/user/env.env";
-        ExecStart = ''/usr/local/bin/update-sddm-weather'';
-      };
-  };
-  systemd.user.timers."sddm-weather" = {
-      enable = true;
-      wantedBy = [ "timers.target" ];
-      description = "Refresh SDDM weather every 10 minutes";
-      timerConfig = {
-          OnBootSec = "20s";
-          OnUnitActiveSec = "10min";
-          AccuracySec="30s";
-          Persistent="true";
-      };
-  };
-
   services.pipewire = {
     enable = true;
     pulse.enable = true;
@@ -161,6 +141,7 @@
   services.flatpak.enable = true;
   programs.firefox.enable = true;
   programs.zsh.enable = true;
+  services.desktopManager.gnome.enable = true;
 
   programs.hyprland = {
     enable = true;

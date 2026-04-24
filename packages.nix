@@ -57,7 +57,6 @@
     mono
     msbuild
     unzip
-    inputs.helium.defaultPackage.${system}
 nushell
 tokyonight-gtk-theme
 bluetui

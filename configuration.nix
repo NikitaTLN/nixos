@@ -12,6 +12,8 @@
   services.tailscale.enable = true;
   services.ratbagd.enable = true;
   i18n.defaultLocale = "ru_RU.UTF-8";
+  services.xserver.enable = true;
+  services.xserver.windowManager.oxwm.enable = true;
 
 
   networking.firewall.enable = false;

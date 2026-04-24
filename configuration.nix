@@ -108,7 +108,6 @@
 
   services.libinput.enable = true;
 
-  services.xserver.enable = true;
   services.xserver.videoDrivers = ["nvidia"];
 
   users.users.w1dget = {

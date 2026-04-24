@@ -23,7 +23,10 @@
             modules = [
                 oxwm.nixosModules.default
                 {
-                  services.xserver.windowManager.oxwm.enable = true;
+                  services.xserver = {
+                    windowManager.oxwm.enable = true;
+                    enable = true;
+                  };
                 }
                 ./configuration.nix
                 home-manager.nixosModules.home-manager

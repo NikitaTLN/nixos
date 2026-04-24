@@ -3,7 +3,6 @@
     
     inputs = {
         nixpkgs.url = "nixpkgs/nixos-unstable";
-        affinity-nix.url = "github:mrshmllow/affinity-nix";
         home-manager = {
             url = "github:nix-community/home-manager";
             inputs.nixpkgs.follows = "nixpkgs";
@@ -16,15 +15,11 @@
         };
     };
 
-    outputs = { self, nixpkgs, home-manager, sfpro, helium, affinity-nix,... } @ inputs: {
+    outputs = { self, nixpkgs, home-manager, sfpro, helium,... } @ inputs: {
         nixosConfigurations.nixos-btw = nixpkgs.lib.nixosSystem {
             system = "x86_64-linux";
             specialArgs = { inherit inputs; };
             modules = [
-              ({pkgs, ... }: {
-                nixpkgs.overlays = [ affinity-nix.overlays.default ];
-                environment.systemPackages = [ pkgs.affinity-v3 ];
-                })
                 ./configuration.nix
                 home-manager.nixosModules.home-manager
                 {

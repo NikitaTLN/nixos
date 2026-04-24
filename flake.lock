@@ -63,10 +63,31 @@
         "url": "https://devimages-cdn.apple.com/design/resources/download/NY.dmg"
       }
     },
+    "oxwm": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1774883058,
+        "narHash": "sha256-lt6J9FGfBrrvl4vqahDAH0YfaXYMZC74QHVKtCAOjvc=",
+        "owner": "tonybanters",
+        "repo": "oxwm",
+        "rev": "f6a28b2350b32683922c6bc428a3c1c30650b78d",
+        "type": "github"
+      },
+      "original": {
+        "owner": "tonybanters",
+        "repo": "oxwm",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
         "home-manager": "home-manager",
         "nixpkgs": "nixpkgs",
+        "oxwm": "oxwm",
         "sfpro": "sfpro"
       }
     },

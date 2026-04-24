@@ -132,7 +132,6 @@
   services.flatpak.enable = true;
   programs.firefox.enable = true;
   programs.zsh.enable = true;
-  services.desktopManager.gnome.enable = true;
 
   programs.hyprland = {
     enable = true;

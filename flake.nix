@@ -21,6 +21,10 @@
             system = "x86_64-linux";
             specialArgs = { inherit inputs; };
             modules = [
+              ({pkgs, ... }: {
+                nixpkgs.overlays = [ affinity-nix.overlays.default ];
+                environment.systemPackages = [ pkgs.affinity-v3 ];
+                })
                 ./configuration.nix
                 home-manager.nixosModules.home-manager
                 {

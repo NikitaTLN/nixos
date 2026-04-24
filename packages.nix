@@ -58,7 +58,6 @@
     msbuild
     unzip
     inputs.helium.defaultPackage.${system}
-    affinity-v3
 nushell
 tokyonight-gtk-theme
 bluetui

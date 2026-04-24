@@ -7,15 +7,12 @@
             url = "github:nix-community/home-manager";
             inputs.nixpkgs.follows = "nixpkgs";
         };
-        helium = {
-            url = "github:NikitaTLN/helium2nix/main";
-        };
         sfpro = {
             url = "github:Lyndeno/apple-fonts.nix";
         };
     };
 
-    outputs = { self, nixpkgs, home-manager, sfpro, helium,... } @ inputs: {
+    outputs = { self, nixpkgs, home-manager, sfpro, ... } @ inputs: {
         nixosConfigurations.nixos-btw = nixpkgs.lib.nixosSystem {
             system = "x86_64-linux";
             specialArgs = { inherit inputs; };

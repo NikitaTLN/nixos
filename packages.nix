@@ -95,5 +95,6 @@ python313Packages.pip
 python313Packages.pyqt6
 python314Packages.pyqt6
 gparted
+python313Packages.pyqt6
   ];
 }

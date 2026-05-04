@@ -16,6 +16,7 @@
   services.xserver.enable = true;
   services.xserver.windowManager.oxwm.enable = true;
   services.picom.enable = true;
+  services.hardware.openrgb.enable = true;
 
 
   networking.firewall.enable = false;

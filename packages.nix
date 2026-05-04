@@ -3,6 +3,7 @@
   environment.systemPackages = with pkgs; [
     wine
     docker-compose
+    openrgb
     pnpm
     vim
     dipc

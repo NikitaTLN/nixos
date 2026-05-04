@@ -76,7 +76,6 @@ piper
 gsettings-desktop-schemas
 gnumake
 mpv
-bootdev-cli
 pamixer
 rubik
 noto-fonts-cjk-sans

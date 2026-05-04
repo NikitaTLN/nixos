@@ -73,7 +73,7 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 
 path+=('/usr/local/bin/')
-path+=('$HOME/go/bin/')
+path+=('/home/w1dget/go/bin/')
 
 alias vim='nvim'
 alias airplay='uxplay -fps 120 -nh -n hello_mr_computer'

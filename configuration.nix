@@ -9,7 +9,6 @@
 
   nixpkgs.config.allowUnfree = true;
   services.desktopManager.plasma6.enable = true;
-  services.desktopManager.gnome.enable = true;
   programs.ssh.askPassword = pkgs.lib.mkForce "${pkgs.kdePackages.ksshaskpass.out}/bin/ksshaskpass";
 
   services.tailscale.enable = true;

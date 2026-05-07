@@ -9,6 +9,7 @@
 
   nixpkgs.config.allowUnfree = true;
   services.desktopManager.plasma6.enable = true;
+  services.desktopManager.gnome.enable = true;
 
   services.tailscale.enable = true;
   services.ratbagd.enable = true;

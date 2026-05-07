@@ -99,5 +99,6 @@ python313Packages.pyqt6
 opencode
 uv
 gnome-tweaks
+protonmail-desktop
   ];
 }

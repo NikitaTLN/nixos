@@ -100,5 +100,6 @@ opencode
 uv
 gnome-tweaks
 protonmail-desktop
+protonmail-desktop
   ];
 }

@@ -101,5 +101,6 @@ uv
 gnome-tweaks
 protonmail-desktop
 protonmail-desktop
+libreoffice
   ];
 }

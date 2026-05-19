@@ -102,5 +102,6 @@ gnome-tweaks
 protonmail-desktop
 protonmail-desktop
 libreoffice
+davinci-resolve
   ];
 }

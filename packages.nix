@@ -102,6 +102,6 @@ gnome-tweaks
 protonmail-desktop
 protonmail-desktop
 libreoffice
-davinci-resolve
+kdePackages.kdenlive
   ];
 }

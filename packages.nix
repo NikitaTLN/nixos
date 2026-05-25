@@ -103,5 +103,6 @@ protonmail-desktop
 protonmail-desktop
 libreoffice
 kdePackages.kdenlive
+kdePackages.print-manager
   ];
 }

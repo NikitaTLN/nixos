@@ -24,6 +24,8 @@
   services.avahi = {
       enable = true;
       nssmdns = true;
+      nssmdns4 = true;
+      openFirewall = true;
       publish = {
           enable = true;
           addresses = true;
@@ -116,6 +118,7 @@
   services.libinput.enable = true;
 
   services.xserver.videoDrivers = ["nvidia"];
+  services.printing.enable = true;
 
   users.users.w1dget = {
     isNormalUser = true;

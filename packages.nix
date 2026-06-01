@@ -105,7 +105,7 @@ libreoffice
 kdePackages.kdenlive
 kdePackages.print-manager
 chromium
-vllm
 triton-llvm
+nvim
   ];
 }

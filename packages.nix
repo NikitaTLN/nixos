@@ -106,6 +106,6 @@ kdePackages.kdenlive
 kdePackages.print-manager
 chromium
 triton-llvm
-nvim
+neovim
   ];
 }

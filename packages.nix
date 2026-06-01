@@ -105,5 +105,6 @@ libreoffice
 kdePackages.kdenlive
 kdePackages.print-manager
 chromium
+vllm
   ];
 }

@@ -106,5 +106,6 @@ kdePackages.kdenlive
 kdePackages.print-manager
 chromium
 vllm
+triton-llvm
   ];
 }

@@ -99,12 +99,14 @@
 # bash prompt: PROMPT_COMMAND='PS1_CMD1=$(git branch --show-current 2>/dev/null)'; PS1='\[\e[38;5;45m\]\w\[\e[0m\] \[\e[38;5;196m\]${PS1_CMD1}\n\[\e[38;5;48m\]❯\[\e[0m\] '
 
   programs.virt-manager.enable = true;
+  hardware.nvidia-container-toolkit.enable = true;
+  virtualisation.docker.enable = true;
+  virtualisation.docker.daemon.settings.features.cdi = true;
   programs.nix-ld.enable = true;
   programs.kdeconnect.enable = true;
   users.groups.libvirtd.members = ["w1dget"];
   virtualisation.libvirtd.enable = true;
   virtualisation.spiceUSBRedirection.enable = true;
-  virtualisation.docker.enable = true;
   hardware.bluetooth.enable = true;
 
   services.displayManager.ly.enable = true;

@@ -107,6 +107,5 @@ kdePackages.print-manager
 chromium
 triton-llvm
 neovim
-python313Packages.numpy
   ];
 }

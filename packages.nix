@@ -107,5 +107,6 @@ kdePackages.print-manager
 chromium
 neovim
 nvidia-container-toolkit
+ollama
   ];
 }

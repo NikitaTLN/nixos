@@ -47,7 +47,13 @@
        hyprland.default = [ "hyprland" "gtk" ];
      };
   };
-
+  nixpkgs.overlays = [
+    (final: prev: {
+      openldap = prev.openldap.overrideAttrs (old: {
+        doCheck = false;
+      });
+    })
+  ];
   boot.loader = {
     grub.enable = false;
     systemd-boot.enable = false;

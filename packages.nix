@@ -107,5 +107,6 @@ kdePackages.print-manager
 chromium
 triton-llvm
 neovim
+llvmPackages.libstdcxxClang
   ];
 }

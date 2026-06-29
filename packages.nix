@@ -109,5 +109,6 @@ neovim
 nvidia-container-toolkit
 ollama
 tradingview
+cope
   ];
 }

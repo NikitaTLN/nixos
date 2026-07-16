@@ -92,14 +92,10 @@ gst_all_1.gst-plugins-good
 avahi
 obs-studio
 python313Packages.pip
-python313Packages.pyqt6
-python314Packages.pyqt6
 gparted
-python313Packages.pyqt6
 opencode
 uv
 gnome-tweaks
-protonmail-desktop
 protonmail-desktop
 libreoffice
 kdePackages.kdenlive
